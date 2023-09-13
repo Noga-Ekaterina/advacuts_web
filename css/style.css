@@ -303,9 +303,11 @@ h2 {
 
 .slide {
   position: absolute;
+  transition: 1s;
 }
 .slide.active {
   position: relative;
+  left: 0;
 }
 
 #services {
@@ -314,6 +316,7 @@ h2 {
 }
 #services .flexSB {
   flex-wrap: wrap;
+  width: 100%;
 }
 @media screen and (min-width: 1920px) {
   #services .flexSB {
@@ -326,7 +329,10 @@ h2 {
   }
 }
 #services .next {
-  right: 0;
+  left: 100%;
+}
+#services .prev {
+  left: -100%;
 }
 
 .service {
@@ -403,14 +409,32 @@ h2 {
 
 #nav_services {
   display: flex;
-  margin: auto;
+  justify-content: center;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
   margin-bottom: 30px;
 }
 #nav_services button {
   background: none;
-  color: #fff;
-}
-#nav_services [disabled] {
+  border: 0;
   color: #FCFFD4;
   opacity: 0.5;
+  cursor: pointer;
+  transition: 1s;
+}
+#nav_services button[disabled], #nav_services button:hover {
+  color: #fff;
+  opacity: 1;
+}
+#nav_services button[disabled] {
+  cursor: auto;
+}
+#nav_services button .line {
+  height: 2px;
+  width: 30px;
+}
+#nav_services button .line div {
+  border-radius: 50%;
+  width: 3px;
+  height: 3px;
 }/*# sourceMappingURL=style.css.map */

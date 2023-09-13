@@ -297,8 +297,10 @@ h2{
 }
 .slide{
    position: absolute;
+   transition: 1s;
    &.active{
       position: relative;
+      left: 0;
    }
 }
 #services{
@@ -306,6 +308,7 @@ h2{
    position: relative;
    .flexSB{
       flex-wrap: wrap;
+      width: 100%;
       @include xl {
          gap: 30px;
       }
@@ -314,7 +317,10 @@ h2{
       }
    }
    .next{
-      right: 0;
+      left: 100%;
+   }
+   .prev{
+      left: -100%;
    }
 }
 .service{
@@ -391,14 +397,33 @@ h2{
 }
 #nav_services{
    display: flex;
-   margin: auto;
+   justify-content: center;
+   column-gap: 10px;
    margin-bottom: 30px;
    button{
       background: none;
-      color: #fff;
-   }
-   [disabled]{
+      border: 0;
       color: $yellow;
       opacity: 0.5;
+      cursor: pointer;
+      transition: 1s;
+   
+      &[disabled], &:hover{
+         color: #fff;
+         opacity: 1;
+      }
+      &[disabled]{
+         cursor: auto
+         ;
+      }
+      .line{
+         height: 2px;
+         width: 30px;
+         div{
+            border-radius: 50%;
+            width: 3px;
+            height: 3px;
+         }
+      }
    }
 }
