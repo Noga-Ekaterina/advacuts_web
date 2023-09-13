@@ -1,0 +1,147 @@
+header {
+  background-image: url(../img/home_img/backg_header.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  overflow: hidden;
+}
+@media screen and (min-width: 768px) and (max-width: 1919px) {
+  header {
+    height: 688px;
+  }
+}
+@media screen and (max-width: 767px) {
+  header {
+    aspect-ratio: 1/2.5;
+    min-height: 820px;
+    max-width: 91.49vw !important;
+  }
+  header .yes_small {
+    display: block;
+    max-width: 292px;
+    margin-top: 66px;
+    padding: 19px 17px;
+    color: #fff;
+    text-align: center;
+    border-radius: 3px;
+    border: 1px solid #FFF;
+    box-shadow: 0px 0px 26px 0px rgba(149, 127, 61, 0.68);
+  }
+}
+header .img_and_t img {
+  display: none;
+  position: relative;
+  z-index: 5;
+}
+@media screen and (min-width: 1920px) {
+  header .img_and_t {
+    width: 731px;
+    max-height: 596px;
+    position: relative;
+  }
+  header .img_and_t .h_img_b {
+    display: block;
+    margin-left: 31%;
+  }
+  header .img_and_t #h_disck {
+    position: absolute;
+    bottom: -55%;
+    left: 0;
+    margin-left: 0;
+    z-index: 1;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1919px) {
+  header .img_and_t {
+    position: absolute;
+    right: 0;
+  }
+  header .img_and_t #h_img_t {
+    display: block;
+  }
+}
+@media screen and (max-width: 767px) {
+  header .img_and_t img {
+    width: 100%;
+  }
+  header .img_and_t #h_img_m {
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+}
+header .img_and_t .text {
+  position: absolute;
+  top: 70px;
+  left: 40px;
+  text-align: right;
+}
+@media screen and (max-width: 767px) {
+  header .img_and_t .text {
+    display: none;
+  }
+}
+@media screen and (min-width: 1920px) {
+  header .img_and_t .text {
+    left: 60px;
+  }
+}
+
+h1 {
+  font-size: 50px;
+}
+
+#a_be {
+  margin-top: 45px;
+}
+@media screen and (max-width: 767px) {
+  #a_be {
+    display: none;
+  }
+}
+#a_be a {
+  display: block;
+  position: relative;
+  margin-left: 35px;
+  margin-bottom: 35px;
+  padding-bottom: 8px;
+  color: #fff;
+  border-bottom: 2px solid transparent;
+  -o-border-image: linear-gradient(90deg, #FCFFD4 0%, #383921 101.45%);
+     border-image: linear-gradient(90deg, #FCFFD4 0%, #383921 101.45%);
+  border-image-slice: 1;
+}
+@media screen and (min-width: 1920px) {
+  #a_be a {
+    opacity: 0.6;
+    transition: 0.5s;
+  }
+  #a_be a:hover {
+    opacity: 1;
+  }
+}
+#a_be a::before {
+  position: absolute;
+  left: -35px;
+}
+#a_be a:first-child::before {
+  content: url(../img/home_img/phone-call\ 1.png);
+}
+#a_be a:last-child::before {
+  content: url(../img/home_img/file-text\ 1.png);
+}
+
+@media screen and (min-width: 1920px) {
+  .img_and_t .text {
+    font-size: 18px;
+  }
+}
+.img_and_t .text span {
+  font-size: 14px;
+  opacity: 0.5;
+}
+
+#block1 {
+  background: linear-gradient(117deg, #26241E 35.16%, #15130D 71.84%), #1F1E1B;
+}/*# sourceMappingURL=home.css.map */
