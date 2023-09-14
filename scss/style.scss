@@ -456,3 +456,12 @@ h2{
    
    }
 }
+#shadow_block{
+   position: fixed;
+   inset: 0;
+   display: none;
+   justify-content: center;
+   align-items: center;
+   background: rgba(26, 25, 22, 0.84);
+   z-index: 999999;
+}

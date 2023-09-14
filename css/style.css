@@ -464,4 +464,14 @@ h2 {
   top: -1.5px;
   transition: 1s;
   z-index: 2;
+}
+
+#shadow_block {
+  position: fixed;
+  inset: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: rgba(26, 25, 22, 0.84);
+  z-index: 999999;
 }/*# sourceMappingURL=style.css.map */
