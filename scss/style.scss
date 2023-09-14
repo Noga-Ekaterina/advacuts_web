@@ -281,7 +281,49 @@ header {
       justify-content: space-between;
    }
 }
+.a_be {
+   margin-top: 45px;
 
+   @include mob {
+      header &{
+         display: none;
+      }
+   }
+
+   a {
+      display: block;
+      position: relative;
+      margin-left: 35px;
+      margin-bottom: 35px;
+      padding-bottom: 8px;
+      color: #fff;
+      border-bottom: 2px solid transparent;
+      border-image: linear-gradient(90deg, #FCFFD4 0%, #383921 101.45%);
+      border-image-slice: 1;
+
+      @include xl {
+         opacity: 0.6;
+         transition: 0.5s;
+
+         &:hover {
+            opacity: 1;
+         }
+      }
+
+      &::before {
+         position: absolute;
+         left: -35px;
+      }
+
+      &.be_phone::before{
+         content: url(../img/home_img/phone-call\ 1.png);
+      }
+
+      &.be_doc::before {
+         content: url(../img/home_img/file-text\ 1.png);
+      }
+   }
+}
 .yes_small,
 #open_menu {
    @include t-u {
@@ -464,4 +506,28 @@ h2{
    align-items: center;
    background: rgba(26, 25, 22, 0.84);
    z-index: 999999;
+}
+#service_descr{
+   border-radius: 35px 0 0 0;
+   background: linear-gradient(214deg, #2D2B23 9.6%, #292923 108.65%);
+   box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.33);
+   display: none;
+   @include mob-and-t {
+      img{
+         display: none;
+      }
+   }
+   .block_text{
+      margin: 66px;
+      @include t-u {
+         width: 436px;
+      }
+   }
+   h2{
+      border-bottom: 2px solid transparent;
+      border-image: linear-gradient(90deg, #FCFFD4 0%, #383921 101.45%);
+      border-image-slice: 1;
+      padding-bottom: 8px;
+      text-align: left;
+   }
 }

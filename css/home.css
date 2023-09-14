@@ -92,46 +92,6 @@ h1 {
   font-size: 50px;
 }
 
-#a_be {
-  margin-top: 45px;
-}
-@media screen and (max-width: 767px) {
-  #a_be {
-    display: none;
-  }
-}
-#a_be a {
-  display: block;
-  position: relative;
-  margin-left: 35px;
-  margin-bottom: 35px;
-  padding-bottom: 8px;
-  color: #fff;
-  border-bottom: 2px solid transparent;
-  -o-border-image: linear-gradient(90deg, #FCFFD4 0%, #383921 101.45%);
-     border-image: linear-gradient(90deg, #FCFFD4 0%, #383921 101.45%);
-  border-image-slice: 1;
-}
-@media screen and (min-width: 1920px) {
-  #a_be a {
-    opacity: 0.6;
-    transition: 0.5s;
-  }
-  #a_be a:hover {
-    opacity: 1;
-  }
-}
-#a_be a::before {
-  position: absolute;
-  left: -35px;
-}
-#a_be a:first-child::before {
-  content: url(../img/home_img/phone-call\ 1.png);
-}
-#a_be a:last-child::before {
-  content: url(../img/home_img/file-text\ 1.png);
-}
-
 @media screen and (min-width: 1920px) {
   .img_and_t .text {
     font-size: 18px;
