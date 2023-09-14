@@ -523,11 +523,12 @@ h2{
          width: 436px;
       }
    }
-   h2{
+   h2, a{
       border-bottom: 2px solid transparent;
       border-image: linear-gradient(90deg, #FCFFD4 0%, #383921 101.45%);
       border-image-slice: 1;
       padding-bottom: 8px;
       text-align: left;
+      width: fit-content;
    }
 }

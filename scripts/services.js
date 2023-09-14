@@ -32,7 +32,7 @@ class MondalService{
 
    checkText(){
       shadowBlock.style.display= "flex";
-      serviceDescr.style.display= "block";
+      serviceDescr.style.display= "flex";
 
       serviceDescr.querySelector("#p1").innerHTML= this.p1;
       document.querySelector('#p2').innerHTML= this.p2;
