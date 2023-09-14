@@ -237,6 +237,7 @@ header {
 
    @include t {
       column-gap: 28px;
+      font-size: 15;
    }
 
    a {
@@ -413,16 +414,24 @@ h2{
          opacity: 1;
       }
       &[disabled]{
-         cursor: auto
-         ;
+         cursor: auto;
+         &+#nav_line div{
+            left: 0;
+         }
       }
-      .line{
+      #nav_line{
          height: 2px;
          width: 30px;
+         position: relative;
          div{
             border-radius: 50%;
             width: 3px;
             height: 3px;
+            background: #fff;
+            position: absolute;
+            left: 100%;
+            transition: 1s;
+            
          }
       }
    }
