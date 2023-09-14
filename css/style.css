@@ -411,8 +411,9 @@ h2 {
 #nav_services {
   display: flex;
   justify-content: center;
-  -moz-column-gap: 10px;
-       column-gap: 10px;
+  -moz-column-gap: 14px;
+       column-gap: 14px;
+  align-items: center;
   margin-bottom: 30px;
 }
 #nav_services button {
@@ -433,17 +434,34 @@ h2 {
 #nav_services button[disabled] + #nav_line div {
   left: 0;
 }
-#nav_services button #nav_line {
+#nav_services button[disabled] + #nav_line::before {
+  width: 0;
+}
+#nav_services #nav_line {
   height: 2px;
   width: 30px;
   position: relative;
+  background: linear-gradient(90deg, #FCFFD4 0%, rgba(0, 0, 0, 0) 98.7%);
 }
-#nav_services button #nav_line div {
+#nav_services #nav_line::before {
+  content: "";
+  background: linear-gradient(270deg, #FCFFD4 0%, rgba(0, 0, 0, 0.8) 98.7%);
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  transition: 1s;
+  z-index: 1;
+}
+#nav_services #nav_line div {
   border-radius: 50%;
-  width: 3px;
-  height: 3px;
+  width: 5px;
+  height: 5px;
   background: #fff;
   position: absolute;
   left: 100%;
+  top: -1.5px;
   transition: 1s;
+  z-index: 2;
 }/*# sourceMappingURL=style.css.map */

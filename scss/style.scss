@@ -399,7 +399,8 @@ h2{
 #nav_services{
    display: flex;
    justify-content: center;
-   column-gap: 10px;
+   column-gap: 14px;
+   align-items: center;
    margin-bottom: 30px;
    button{
       background: none;
@@ -415,24 +416,43 @@ h2{
       }
       &[disabled]{
          cursor: auto;
-         &+#nav_line div{
-            left: 0;
+         &+#nav_line {
+            div{
+               left: 0;
+            }
+            &::before{
+               width: 0;
+            }
          }
       }
-      #nav_line{
-         height: 2px;
-         width: 30px;
-         position: relative;
-         div{
-            border-radius: 50%;
-            width: 3px;
-            height: 3px;
-            background: #fff;
-            position: absolute;
-            left: 100%;
-            transition: 1s;
-            
-         }
+   }
+   #nav_line{
+      height: 2px;
+      width: 30px;
+      position: relative;
+      background: linear-gradient(90deg, #FCFFD4 0%, rgba(0, 0, 0, 0.00) 98.7%);
+      &::before{
+         content: '';
+         background: linear-gradient(270deg, #FCFFD4 0%, rgba(0, 0, 0, 0.8) 98.7%);
+         position: absolute;
+         left: 0;
+         top: 0;
+         height: 100%;
+         width: 100%;
+         transition: 1s;
+         z-index: 1;
       }
+      div{
+         border-radius: 50%;
+         width: 5px;
+         height: 5px;
+         background: #fff;
+         position: absolute;
+         left: 100%;
+         top: -1.5px;
+         transition: 1s;
+         z-index: 2;
+      }
+   
    }
 }
