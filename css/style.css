@@ -300,10 +300,6 @@ header a {
   margin-bottom: 35px;
   padding-bottom: 8px;
   color: #fff;
-  border-bottom: 2px solid transparent;
-  -o-border-image: linear-gradient(90deg, #FCFFD4 0%, #383921 101.45%);
-     border-image: linear-gradient(90deg, #FCFFD4 0%, #383921 101.45%);
-  border-image-slice: 1;
 }
 @media screen and (min-width: 1920px) {
   .a_be a {
@@ -323,6 +319,13 @@ header a {
 }
 .a_be a.be_doc::before {
   content: url(../img/home_img/file-text\ 1.png);
+}
+
+.border_gradient {
+  border-bottom: 2px solid transparent;
+  -o-border-image: linear-gradient(90deg, #FCFFD4 0%, #383921 101.45%);
+     border-image: linear-gradient(90deg, #FCFFD4 0%, #383921 101.45%);
+  border-image-slice: 1;
 }
 
 @media screen and (min-width: 768px) {
@@ -517,6 +520,7 @@ h2 {
 }
 
 #service_descr {
+  position: relative;
   border-radius: 35px 0 0 0;
   background: linear-gradient(214deg, #2D2B23 9.6%, #292923 108.65%);
   box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.33);
@@ -536,12 +540,29 @@ h2 {
   }
 }
 #service_descr h2, #service_descr a {
-  border-bottom: 2px solid transparent;
-  -o-border-image: linear-gradient(90deg, #FCFFD4 0%, #383921 101.45%);
-     border-image: linear-gradient(90deg, #FCFFD4 0%, #383921 101.45%);
-  border-image-slice: 1;
   padding-bottom: 8px;
   text-align: left;
   width: -moz-fit-content;
   width: fit-content;
+}
+
+#close_descr {
+  position: absolute;
+  top: 20px;
+  right: 17px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.4);
+  color: #FCFFD4;
+  font-size: 16px;
+  padding: 2px;
+  aspect-ratio: 1/1;
+  width: 19px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.7s;
+}
+#close_descr:hover {
+  background: rgba(0, 0, 0, 0.4);
+  width: 34px;
+  font-size: 32px !important;
 }/*# sourceMappingURL=style.css.map */

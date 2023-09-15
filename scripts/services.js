@@ -62,3 +62,8 @@ const mondalsService= [
 mondalsService.forEach((el)=>{
    el.showMondal()
 })
+
+document.querySelector('#close_descr').onclick= function(){
+   shadowBlock.style.display= "";
+   serviceDescr.style.display= "";
+};

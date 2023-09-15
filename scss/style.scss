@@ -297,9 +297,6 @@ header {
       margin-bottom: 35px;
       padding-bottom: 8px;
       color: #fff;
-      border-bottom: 2px solid transparent;
-      border-image: linear-gradient(90deg, #FCFFD4 0%, #383921 101.45%);
-      border-image-slice: 1;
 
       @include xl {
          opacity: 0.6;
@@ -323,6 +320,11 @@ header {
          content: url(../img/home_img/file-text\ 1.png);
       }
    }
+}
+.border_gradient{
+   border-bottom: 2px solid transparent;
+      border-image: linear-gradient(90deg, #FCFFD4 0%, #383921 101.45%);
+      border-image-slice: 1;
 }
 .yes_small,
 #open_menu {
@@ -508,6 +510,7 @@ h2{
    z-index: 999999;
 }
 #service_descr{
+   position: relative;
    border-radius: 35px 0 0 0;
    background: linear-gradient(214deg, #2D2B23 9.6%, #292923 108.65%);
    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.33);
@@ -524,11 +527,29 @@ h2{
       }
    }
    h2, a{
-      border-bottom: 2px solid transparent;
-      border-image: linear-gradient(90deg, #FCFFD4 0%, #383921 101.45%);
-      border-image-slice: 1;
+      
       padding-bottom: 8px;
       text-align: left;
       width: fit-content;
+   }
+}
+#close_descr{
+   position: absolute;
+   top: 20px;
+   right: 17px;
+   border-radius: 50%;
+   background: rgba(0, 0, 0, 0.4);
+   color: $yellow;
+   font-size: 16px;
+   padding: 2px;
+   aspect-ratio: 1/1;
+   width: 19px;
+   text-align: center;
+   cursor: pointer;
+   transition: 0.7s;
+   &:hover{
+      background: rgba(0, 0, 0, 0.4);
+      width: 34px;
+      font-size: 32px !important;
    }
 }
