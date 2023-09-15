@@ -294,11 +294,9 @@ header {
    }
 
    a {
-      display: block;
       position: relative;
       margin-left: 35px;
       margin-bottom: 35px;
-      padding-bottom: 8px;
       color: #fff;
 
       @include xl {
@@ -326,8 +324,12 @@ header {
 }
 .border_gradient{
    border-bottom: 2px solid transparent;
-      border-image: linear-gradient(90deg, #FCFFD4 0%, #383921 101.45%);
-      border-image-slice: 1;
+   border-image: linear-gradient(90deg, #FCFFD4 0%, #383921 101.45%);
+   border-image-slice: 1;
+   padding-bottom: 8px;
+   display: block;
+   width: fit-content;
+   text-decoration: none;
 }
 .yes_small,
 #open_menu {

@@ -21,47 +21,33 @@ btnFiz.onclick= function(){
 }
 const shadowBlock= document.querySelector('#shadow_block');
 const serviceDescr= document.querySelector('#service_descr');
-class MondalService{
-   constructor(nameService, h2, p1, p2, p3){
-      this.nameService= nameService;
-      this.h2= h2;
-      this.p1= p1;
-      this.p2= p2;
-      this.p3= p3
+const modalsServices= {
+   "Consumer protection":[
+   "Защита прав потребителей",
+   "Юридически грамотное составление документов, которые требуются в рамках судебного разбирательстваЮридически грамотное составление документов, которые", 
+   "Требуются в рамках судебного разбирательства", "Юридически грамотное составление документов, которые требуются в рамках судебного разбирательстваЮридически грамотное составление документов"
+   ],
+   "Family disputes":[
+   "Семейные споры",
+   "Юридически грамотное составление документов, которые требуются в рамках судебного разбирательстваЮридически грамотное составление документов, которые",
+   "Требуются в рамках судебного разбирательства", "Юридически грамотное составление документов, которые требуются в рамках судебного разбирательстваЮридически грамотное составление документов"
+   ]
+   } 
+   for(var key in modalsServices){
+   console.log(key);
+   console.log(modalsServices[key])
+   document.querySelector('[data-service="'+key+'"]'). addEventListener('click', ()=>checkText(modalsServices[key]))
    }
-
-   checkText(){
-      shadowBlock.style.display= "flex";
-      serviceDescr.style.display= "flex";
-
-      serviceDescr.querySelector("#p1").innerHTML= this.p1;
-      document.querySelector('#p2').innerHTML= this.p2;
-      document.querySelector('#p3').innerHTML= this.p3;
-      serviceDescr.querySelector("h2").innerHTML= this.h2
+   function checkText (modalService){
+   console.log(modalService)
+   shadowBlock.style.display= "flex";
+   serviceDescr.style.display= "flex";
+   
+   serviceDescr.querySelector("h2").innerHTML = modalService[0]
+   serviceDescr.querySelector("#p1").innerHTML = modalService[1];
+   document.querySelector('#p2').innerHTML = modalService[2];
+   document.querySelector('#p3').innerHTML = modalService[3];
    }
-   showMondal(){
-      document.querySelector('[data-service="'+this.nameService+'"]').onclick= this.checkText;
-   }
-}
-const mondalsService= [
-   new MondalService(
-      "Consumer protection", 
-      "Защита прав потребителей",
-      "Юридически грамотное составление  документов, которые требуются в рамках судебного разбирательстваЮридически грамотное составление  документов, которые ",
-      "Требуются  в рамках судебного разбирательства",
-      "Юридически грамотное составление  документов, которые требуются  в рамках судебного разбирательстваЮридически грамотное составление  документов"
-   ),
-   new MondalService(
-      "Family disputes",
-      "Семейные споры",
-      "Юридически грамотное составление  документов, которые требуются в рамках судебного разбирательстваЮридически грамотное составление  документов, которые ",
-      "Требуются  в рамках судебного разбирательства",
-      "Юридически грамотное составление  документов, которые требуются  в рамках судебного разбирательстваЮридически грамотное составление  документов"
-   )
-]
-mondalsService.forEach((el)=>{
-   el.showMondal()
-})
 
 document.querySelector('#close_descr').onclick= function(){
    shadowBlock.style.display= "";

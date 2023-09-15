@@ -299,11 +299,9 @@ header a {
   }
 }
 .a_be a {
-  display: block;
   position: relative;
   margin-left: 35px;
   margin-bottom: 35px;
-  padding-bottom: 8px;
   color: #fff;
 }
 @media screen and (min-width: 1920px) {
@@ -331,6 +329,11 @@ header a {
   -o-border-image: linear-gradient(90deg, #FCFFD4 0%, #383921 101.45%);
      border-image: linear-gradient(90deg, #FCFFD4 0%, #383921 101.45%);
   border-image-slice: 1;
+  padding-bottom: 8px;
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-decoration: none;
 }
 
 @media screen and (min-width: 768px) {
