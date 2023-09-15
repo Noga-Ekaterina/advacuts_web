@@ -84,7 +84,9 @@ header {
          top: 70px;
          left: 40px;
          text-align: right;
-
+         @include t {
+            left: 30px;
+         }
          @include mob {
             display: none;
          }

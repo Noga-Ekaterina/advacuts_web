@@ -117,6 +117,11 @@ header #flex_header {
 header .menu {
   list-style: none;
 }
+@media screen and (min-width: 768px) and (max-width: 1919px) {
+  header .menu {
+    font-size: 14;
+  }
+}
 header a {
   text-decoration: none;
 }
