@@ -520,6 +520,8 @@ h2{
    background: linear-gradient(214deg, #2D2B23 9.6%, #292923 108.65%);
    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.33);
    display: none;
+   max-height: 100%;
+   overflow-y: auto;
    @include mob-and-t {
       img{
          display: none;
@@ -531,11 +533,15 @@ h2{
          width: 436px;
       }
    }
-   h2, a{
-      
-      padding-bottom: 8px;
+   h2{
+      margin-bottom: 45px;
       text-align: left;
-      width: fit-content;
+   }
+   p{
+      margin-bottom: 20px
+   }
+   .a_be{
+      margin-top: 35px;
    }
 }
 #close_descr{

@@ -533,6 +533,8 @@ h2 {
   background: linear-gradient(214deg, #2D2B23 9.6%, #292923 108.65%);
   box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.33);
   display: none;
+  max-height: 100%;
+  overflow-y: auto;
 }
 @media screen and (max-width: 1919px) {
   #service_descr img {
@@ -547,11 +549,15 @@ h2 {
     width: 436px;
   }
 }
-#service_descr h2, #service_descr a {
-  padding-bottom: 8px;
+#service_descr h2 {
+  margin-bottom: 45px;
   text-align: left;
-  width: -moz-fit-content;
-  width: fit-content;
+}
+#service_descr p {
+  margin-bottom: 20px;
+}
+#service_descr .a_be {
+  margin-top: 35px;
 }
 
 #close_descr {
