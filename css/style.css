@@ -401,6 +401,11 @@ h2 {
   position: relative;
   cursor: pointer;
 }
+@media screen and (max-width: 1919px) {
+  .service {
+    background-position: calc(100% + 8px) calc(100% + 8px);
+  }
+}
 .service::before {
   position: absolute;
   left: 0;
@@ -452,6 +457,10 @@ h2 {
   font-size: 20px;
   margin-left: 36px;
 }
+.service > p {
+  max-width: 310px;
+  font-size: 15px;
+}
 .service:hover::before {
   bottom: 0;
   right: 0;
@@ -470,6 +479,7 @@ h2 {
   margin-bottom: 30px;
 }
 #nav_services button {
+  font-size: 14px;
   background: none;
   border: 0;
   color: #FCFFD4;

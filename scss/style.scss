@@ -383,6 +383,9 @@ h2{
    background-position: right bottom;
    background-repeat: no-repeat;
    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.20);
+   @include mob-and-t {
+      background-position: calc(100% + 8px) calc(100% + 8px);
+   }
    box-sizing: border-box;
    padding: 30px 22px;
    position: relative;
@@ -436,6 +439,10 @@ h2{
          margin-left: 36px;
       }
    }
+   >p{
+      max-width: 310px;
+      font-size: 15px;
+   }
    &:hover{
       &::before{
          bottom: 0;
@@ -455,6 +462,7 @@ h2{
    align-items: center;
    margin-bottom: 30px;
    button{
+      font-size: 14px;
       background: none;
       border: 0;
       color: $yellow;

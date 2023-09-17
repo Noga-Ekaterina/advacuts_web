@@ -112,12 +112,16 @@ h1 {
 #block1 > img {
   position: absolute;
   bottom: 0;
-  right: calc((100vw - 1170px - 742px) / 2);
+  right: calc((100vw - 1170px - 738px) / 2);
 }
 @media screen and (max-width: 1919px) {
   #block1 > img {
     display: none;
   }
+}
+#block1 .width {
+  position: relative;
+  z-index: 4;
 }
 
 #services + a {

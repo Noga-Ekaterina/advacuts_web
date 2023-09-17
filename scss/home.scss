@@ -121,10 +121,14 @@ h1 {
    >img{
       position: absolute;
       bottom: 0;
-      right: calc((100vw - $max-w-xl - 742px) / 2);
+      right: calc((100vw - $max-w-xl - 738px) / 2);
       @include mob-and-t {
          display: none;
       }
+   }
+   .width{
+      position: relative;
+      z-index: 4;
    }
 }
 #services+a{
