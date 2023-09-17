@@ -37,13 +37,12 @@ header .img_and_t img {
   header .img_and_t {
     width: 731px;
     max-height: 596px;
-    position: relative;
   }
-  header .img_and_t .h_img_b {
+  header .img_and_t .img_b {
     display: block;
     margin-left: 31%;
   }
-  header .img_and_t #h_disck {
+  header .img_and_t .img_disck {
     position: absolute;
     bottom: -55%;
     left: 0;
@@ -56,16 +55,12 @@ header .img_and_t img {
     position: absolute;
     right: 0;
   }
-  header .img_and_t #h_img_t {
-    display: block;
-  }
 }
 @media screen and (max-width: 767px) {
   header .img_and_t img {
     width: 100%;
   }
-  header .img_and_t #h_img_m {
-    display: block;
+  header .img_and_t .img_m {
     position: absolute;
     right: 0;
     bottom: 0;
@@ -92,10 +87,31 @@ header .img_and_t .text {
   }
 }
 
-h1 {
-  font-size: 50px;
+.img_and_t {
+  position: relative;
 }
-
+.img_and_t img {
+  display: none;
+}
+.img_and_t img:not(.img_disck) {
+  position: relative;
+  z-index: 5;
+}
+@media screen and (min-width: 1920px) {
+  .img_and_t .img_b {
+    display: block;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1919px) {
+  .img_and_t .img_t {
+    display: block;
+  }
+}
+@media screen and (max-width: 767px) {
+  .img_and_t .img_m {
+    display: block;
+  }
+}
 @media screen and (min-width: 1920px) {
   .img_and_t .text {
     font-size: 18px;
@@ -104,6 +120,10 @@ h1 {
 .img_and_t .text span {
   font-size: 14px;
   opacity: 0.5;
+}
+
+h1 {
+  font-size: 50px;
 }
 
 #block1 {
@@ -136,12 +156,42 @@ h1 {
 
 #block2 {
   background: linear-gradient(107deg, #181616 -4.1%, #1B1A17 91.06%);
+  padding-bottom: 0;
+  overflow: hidden;
 }
-#block2 > .flexSB {
+#block2 .flex {
+  display: flex;
+  justify-content: center;
   flex-direction: row-reverse;
 }
 @media screen and (min-width: 768px) and (max-width: 1919px) {
-  #block2 > .flexSB {
+  #block2 .flex {
     display: block;
+  }
+}
+#block2 .img_and_t {
+  margin-bottom: -22px;
+}
+@media screen and (min-width: 768px) and (max-width: 1919px) {
+  #block2 .img_and_t img {
+    width: 100%;
+  }
+}
+#block2 .img_disck {
+  position: absolute;
+  right: 9%;
+  top: 43%;
+  z-index: 1;
+}
+#block2 .flexSB {
+  position: absolute;
+  top: 0;
+}
+#block2 .block_text {
+  width: 45%;
+}
+@media screen and (max-width: 1919px) {
+  #block2 .block_text {
+    display: none;
   }
 }/*# sourceMappingURL=home.css.map */

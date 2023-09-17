@@ -41,14 +41,13 @@ header {
       @include xl {
          width: 731px;
          max-height: 596px;
-         position: relative;
 
-         .h_img_b {
+         .img_b {
             display: block;
             margin-left: 31%;
          }
 
-         #h_disck {
+         .img_disck {
             position: absolute;
             bottom: -55%;
             left: 0;
@@ -60,10 +59,6 @@ header {
       @include t {
          position: absolute;
          right: 0;
-
-         #h_img_t {
-            display: block;
-         }
       }
 
       @include mob {
@@ -71,8 +66,7 @@ header {
             width: 100%;
          }
 
-         #h_img_m {
-            display: block;
+         .img_m {
             position: absolute;
             right: 0;
             bottom: 0;
@@ -96,14 +90,31 @@ header {
       }
    }
 }
+.img_and_t{
+   position: relative;
+   img{
+      display: none;
+      &:not(.img_disck){
+         position: relative;
+         z-index: 5;
+      }
+   }
+   @include xl {
+      .img_b{
+         display: block;
+      }
+   }
+   @include t {
+      .img_t{
+         display: block;
+      }
+   }
+      @include mob {
+         .img_m{
+            display: block;
+         }
+      }
 
-h1 {
-   font-size: 50px;
-}
-
-
-
-.img_and_t {
    .text {
       @include xl {
          font-size: 18px;
@@ -115,7 +126,9 @@ h1 {
       }
    }
 }
-
+h1{
+   font-size: 50px;
+}
 #block1{
    background: linear-gradient(117deg, #26241E 35.16%, #15130D 71.84%), #1F1E1B;
    >img{
@@ -141,10 +154,38 @@ h1 {
 }
 #block2{
    background: linear-gradient(107deg, #181616 -4.1%, #1B1A17 91.06%);
-   >.flexSB{
+   padding-bottom: 0;
+   overflow: hidden;
+   .flex{
+      display: flex;
+      justify-content: center;
       flex-direction: row-reverse;
       @include t {
          display: block;
+      }
+   }
+   .img_and_t{
+      margin-bottom: -22px;
+      img{
+         @include t {
+            width: 100%
+         }
+      }
+   }
+   .img_disck{
+      position: absolute;
+      right: 9%;
+      top: 43%;
+      z-index: 1;
+   }
+   .flexSB{
+      position: absolute;
+      top: 0;
+   }
+   .block_text{
+      width: 45%;
+      @include mob-and-t {
+         display: none;
       }
    }
 }
