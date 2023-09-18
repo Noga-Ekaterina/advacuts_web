@@ -90,10 +90,10 @@ header .img_and_t .text {
 .img_and_t {
   position: relative;
 }
-.img_and_t img {
+.img_and_t > img {
   display: none;
 }
-.img_and_t img:not(.img_disck) {
+.img_and_t > img:not(.img_disck) {
   position: relative;
   z-index: 5;
 }
@@ -162,36 +162,104 @@ h1 {
 #block2 .flex {
   display: flex;
   justify-content: center;
-  flex-direction: row-reverse;
 }
 @media screen and (min-width: 768px) and (max-width: 1919px) {
   #block2 .flex {
     display: block;
   }
 }
-#block2 .img_and_t {
-  margin-bottom: -22px;
+@media screen and (min-width: 1920px) {
+  #block2 .img_and_t {
+    margin-bottom: -22px;
+    margin-top: 65px;
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 1919px) {
-  #block2 .img_and_t img {
+  #block2 .img_and_t {
+    margin-top: 80px;
+  }
+}
+@media screen and (max-width: 767px) {
+  #block2 .img_and_t {
+    margin-top: 45px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1919px) {
+  #block2 .img_and_t > img {
     width: 100%;
   }
 }
-#block2 .img_disck {
+@media screen and (max-width: 767px) {
+  #block2 .img_and_t > img {
+    width: 100vw;
+    margin: -4.255vw;
+    margin-top: 65px;
+  }
+}
+@media screen and (max-width: 767px) {
+  #block2 .img_and_t {
+    width: 100%;
+  }
+}
+#block2 .img_and_t .img_disck {
   position: absolute;
   right: 9%;
   top: 43%;
   z-index: 1;
 }
-#block2 .flexSB {
+#block2 .img_and_t .flexSB {
   position: absolute;
-  top: 0;
 }
-#block2 .block_text {
-  width: 45%;
+@media screen and (min-width: 1920px) {
+  #block2 .img_and_t .flexSB {
+    top: 57px;
+    left: -35px;
+    right: -115px;
+  }
 }
 @media screen and (max-width: 1919px) {
-  #block2 .block_text {
-    display: none;
+  #block2 .img_and_t .flexSB {
+    width: 100%;
   }
+}
+@media screen and (max-width: 767px) {
+  #block2 .img_and_t .flexSB {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+#block2 .img_and_t .flexSB .text span {
+  color: #fff;
+}
+#block2 .img_and_t .flexSB .text span::before {
+  content: "";
+  display: inline-block;
+  width: 3px;
+  height: 12px;
+  background: #FCFFD4;
+  margin-right: 10px;
+  opacity: 1;
+  position: relative;
+  bottom: -3px;
+}
+#block2 .img_and_t .icons {
+  margin-top: 14px;
+  display: flex;
+  -moz-column-gap: 14px;
+       column-gap: 14px;
+}
+
+#achievements {
+  width: 50%;
+  text-align: center;
+  align-self: flex-end;
+  padding-bottom: 120px;
+  flex-wrap: wrap;
+  row-gap: 68px;
+  align-items: baseline;
+}
+#achievements p {
+  width: 170px;
+  font-size: 14px;
 }/*# sourceMappingURL=home.css.map */

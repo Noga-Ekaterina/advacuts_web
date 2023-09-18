@@ -92,7 +92,7 @@ header {
 }
 .img_and_t{
    position: relative;
-   img{
+   >img{
       display: none;
       &:not(.img_disck){
          position: relative;
@@ -159,19 +159,36 @@ h1{
    .flex{
       display: flex;
       justify-content: center;
-      flex-direction: row-reverse;
       @include t {
          display: block;
       }
    }
    .img_and_t{
-      margin-bottom: -22px;
-      img{
+      @include xl {
+         margin-bottom: -22px;
+         margin-top: 65px;
+      }
+      @include t {
+         margin-top: 80px;
+      }
+      @include mob {
+      margin-top: 45px;
+      }
+      >img{
          @include t {
             width: 100%
          }
+         @include mob {
+            width: 100vw;
+            margin: 0 -$pading-mob;
+            margin-top: 65px;
+         }
       }
-   }
+      @include mob {
+         width: 100%;
+         
+      }
+   
    .img_disck{
       position: absolute;
       right: 9%;
@@ -180,12 +197,54 @@ h1{
    }
    .flexSB{
       position: absolute;
-      top: 0;
-   }
-   .block_text{
-      width: 45%;
-      @include mob-and-t {
-         display: none;
+      @include xl {
+         top: 57px;
+         left: -35px;
+         right: -115px;
       }
+      @include mob-and-t {
+         width: 100%;
+      }
+      @include mob {
+         position: relative;
+         display: flex;
+         justify-content: space-between;
+      }
+      .text{
+         span{
+            color: #fff;
+            &::before{
+               content: "";
+               display: inline-block;
+               width: 3px;
+               height: 12px;
+               background: $yellow;
+               margin-right: 10px;
+               opacity: 1;
+               position: relative;
+               bottom: -3px;
+            }
+         }
+      }
+   }
+      .icons{
+         margin-top: 14px;
+         display: flex;
+         column-gap: 14px;
+      }
+   }
+   
+}
+#achievements{
+   width: 50%;
+   text-align: center;
+   align-self: flex-end;
+   padding-bottom: 120px;
+   flex-wrap: wrap;
+   row-gap: 68px;
+   align-items: baseline;
+   p{
+      width: 170px;
+      font-size: 14px;
    }
 }

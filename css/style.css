@@ -591,4 +591,16 @@ h2 {
   background: rgba(0, 0, 0, 0.4);
   width: 34px;
   font-size: 32px !important;
+}
+
+@media screen and (min-width: 1920px) {
+  .no_xl {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 1919px) {
+  .yes_xl {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -575,3 +575,13 @@ h2{
       font-size: 32px !important;
    }
 }
+.no_xl{
+   @include xl {
+      display: none !important;
+   }
+}
+.yes_xl{
+   @include mob-and-t {
+      display: none;
+   }
+}
