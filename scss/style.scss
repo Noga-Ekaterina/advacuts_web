@@ -44,17 +44,7 @@ main>div,
 footer {
    position: relative;
 
-   @include xl {
-      padding: 140px $pading-xl;
-   }
-
-   @include t {
-      padding: 55px $pading-t;
-   }
-
-   @include mob {
-      padding: 55px $pading-mob;
-   }
+   @include paddings()
 }
 
 header {
@@ -455,7 +445,7 @@ h2{
 
    }
 }
-#nav_services{
+.nav_slider{
    display: flex;
    justify-content: center;
    column-gap: 14px;
@@ -476,7 +466,7 @@ h2{
       }
       &[disabled]{
          cursor: auto;
-         &+#nav_line {
+         &+.nav_line {
             div{
                left: 0;
             }
@@ -486,7 +476,7 @@ h2{
          }
       }
    }
-   #nav_line{
+   .nav_line{
       height: 2px;
       width: 30px;
       position: relative;

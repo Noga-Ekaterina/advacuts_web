@@ -3,4 +3,17 @@ $yellow-darck: #423805;
 $pading-xl: 19.54vw;
 $pading-t: 3vw;
 $pading-mob:4.255vw;
-$max-w-xl: 1920px - 375px * 2
+$max-w-xl: 1920px - 375px * 2;
+@mixin paddings(){
+   @include xl {
+      padding: 140px $pading-xl;
+   }
+
+   @include t {
+      padding: 55px $pading-t;
+   }
+
+   @include mob {
+      padding: 55px $pading-mob;
+   }
+}

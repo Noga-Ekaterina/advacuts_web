@@ -262,4 +262,27 @@ h1 {
 #achievements p {
   width: 170px;
   font-size: 14px;
+}
+
+#block3 {
+  padding: 0;
+  background-image: url(../img/home_img/backg_block3.png);
+  background-position: center;
+  background-size: cover;
+}
+
+@media screen and (min-width: 1920px) {
+  #coments {
+    padding: 140px 19.54vw;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1919px) {
+  #coments {
+    padding: 55px 3vw;
+  }
+}
+@media screen and (max-width: 767px) {
+  #coments {
+    padding: 55px 4.255vw;
+  }
 }/*# sourceMappingURL=home.css.map */

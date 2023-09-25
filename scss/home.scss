@@ -248,3 +248,28 @@ h1{
       font-size: 14px;
    }
 }
+#block3{
+   padding: 0;
+   background-image: url(../img/home_img/backg_block3.png);
+   background-position: center;
+   background-size: cover;
+   
+}
+#coments{
+   @include paddings()
+   
+}
+.slide.img{
+   @include xl {
+      width: 170px;
+   }
+   @include t {
+      width: 177px;
+   }
+   @include mob {
+      width: 124px;
+   }
+   img{
+      width: 100%;
+   }
+}

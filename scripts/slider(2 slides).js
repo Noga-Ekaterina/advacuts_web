@@ -6,21 +6,22 @@ class Sliders2Slide{
       this.slide2= slide2
    }
    click(){
+      var slider= this;
       this.btnNext.onclick = function () {
-         this.slide2.classList.remove("next");
-         this.slide2.classList.add("active");
-         this.slide1.classList.remove("active");
-         this.slide1.classList.add("prev");
-         this.btnPrev.removeAttribute("disabled");
-         this.btnNext.setAttribute("disabled", "true")
+         slider.slide2.classList.remove("next");
+         slider.slide2.classList.add("active");
+         slider.slide1.classList.remove("active");
+         slider.slide1.classList.add("prev");
+         slider.btnPrev.removeAttribute("disabled");
+         slider.btnNext.setAttribute("disabled", "true")
       }
       this.btnPrev.onclick = function () {
-         this.slide1.classList.remove("prev");
-         this.slide1.classList.add("active");
-         this.slide2.classList.remove("active");
-         this.slide2.classList.add("next");
-         this.btnNext.removeAttribute("disabled");
-         this.btnPrev.setAttribute("disabled", "true")
+         slider.slide1.classList.remove("prev");
+         slider.slide1.classList.add("active");
+         slider.slide2.classList.remove("active");
+         slider.slide2.classList.add("next");
+         slider.btnNext.removeAttribute("disabled");
+         slider.btnPrev.setAttribute("disabled", "true")
       }
    }
 }
