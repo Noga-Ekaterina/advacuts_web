@@ -259,7 +259,7 @@ h1{
    @include paddings()
    
 }
-.slide.img{
+.slide_img{
    @include xl {
       width: 170px;
    }

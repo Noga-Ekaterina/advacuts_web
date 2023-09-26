@@ -285,4 +285,23 @@ h1 {
   #coments {
     padding: 55px 4.255vw;
   }
+}
+
+@media screen and (min-width: 1920px) {
+  .slide_img {
+    width: 170px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1919px) {
+  .slide_img {
+    width: 177px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .slide_img {
+    width: 124px;
+  }
+}
+.slide_img img {
+  width: 100%;
 }/*# sourceMappingURL=home.css.map */
