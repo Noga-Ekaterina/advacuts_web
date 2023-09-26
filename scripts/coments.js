@@ -5,7 +5,7 @@ const videoSlider = document.querySelector('#video_slider');
 const sliderComents= new Sliders2Slide(btnImg, btnVideo, imgSlider, videoSlider);
 sliderComents.click()
 
-var swiperImg = new Swiper(".slide.img", {
+var swiperImg = new Swiper(".slide_img", {
    slidesPerView: 2,
    spaceBetween: 10,
    // navigation: {
