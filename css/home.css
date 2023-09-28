@@ -287,6 +287,9 @@ h1 {
   }
 }
 
+.slide_img {
+  flex-shrink: 0;
+}
 @media screen and (min-width: 1920px) {
   .slide_img {
     width: 170px;

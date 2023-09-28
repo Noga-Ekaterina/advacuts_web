@@ -260,6 +260,7 @@ h1{
    
 }
 .slide_img{
+   flex-shrink: 0;
    @include xl {
       width: 170px;
    }
