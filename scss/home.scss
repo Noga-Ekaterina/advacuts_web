@@ -259,6 +259,11 @@ h1{
    @include paddings()
    
 }
+// .swiper-wrapper{
+//    @include xl {
+//       column-gap: calc((100% - 170px *6) / 5);
+//    }
+// }
 .slide_img{
    flex-shrink: 0;
    @include xl {
