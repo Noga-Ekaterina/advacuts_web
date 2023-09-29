@@ -287,22 +287,33 @@ h1 {
   }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1919px) {
+  #images_slider {
+    max-width: 384px;
+  }
+}
+@media screen and (max-width: 767px) {
+  #images_slider {
+    max-width: 278px;
+  }
+}
+
 .slide_img {
   flex-shrink: 0;
 }
 @media screen and (min-width: 1920px) {
   .slide_img {
-    width: 170px;
+    max-width: 170px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1919px) {
   .slide_img {
-    width: 177px;
+    max-width: 177px;
   }
 }
 @media screen and (max-width: 767px) {
   .slide_img {
-    width: 124px;
+    max-width: 124px;
   }
 }
 .slide_img img {

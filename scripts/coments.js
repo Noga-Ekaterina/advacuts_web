@@ -5,9 +5,9 @@ const videoSlider = document.querySelector('#video_slider');
 const sliderComents= new Sliders2Slide(btnImg, btnVideo, imgSlider, videoSlider);
 sliderComents.click()
 
-var swiperImg = new Swiper(".mySwiper", {
+var swiperImg = new Swiper("#images_slider", {
    slidesPerView: 2,
-   spaceBetween: 10,
+   spaceBetween: 30,
    navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
@@ -15,7 +15,6 @@ var swiperImg = new Swiper(".mySwiper", {
    breakpoints: {
       1920: {
          slidesPerView: 6,
-         spaceBetween: 90,
       },
    },
 });

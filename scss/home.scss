@@ -259,21 +259,24 @@ h1{
    @include paddings()
    
 }
-// .swiper-wrapper{
-//    @include xl {
-//       column-gap: calc((100% - 170px *6) / 5);
-//    }
-// }
+#images_slider{
+   @include t {
+      max-width: 384px;
+   }
+   @include mob {
+      max-width: 278px;
+   }
+}
 .slide_img{
    flex-shrink: 0;
    @include xl {
-      width: 170px;
+      max-width: 170px;
    }
    @include t {
-      width: 177px;
+      max-width: 177px;
    }
    @include mob {
-      width: 124px;
+      max-width: 124px;
    }
    img{
       width: 100%;
