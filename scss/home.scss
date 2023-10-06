@@ -8,7 +8,7 @@ header {
    background-position: top center;
    overflow: hidden;
 
-   
+
 
    @include t {
       height: 688px;
@@ -38,6 +38,7 @@ header {
          position: relative;
          z-index: 5;
       }
+
       @include xl {
          width: 731px;
          max-height: 596px;
@@ -77,9 +78,11 @@ header {
          position: absolute;
          top: 70px;
          text-align: right;
+
          @include t {
             left: 30px;
          }
+
          @include mob {
             display: none;
          }
@@ -90,30 +93,36 @@ header {
       }
    }
 }
-.img_and_t{
+
+.img_and_t {
    position: relative;
-   >img{
+
+   >img {
       display: none;
-      &:not(.img_disck){
+
+      &:not(.img_disck) {
          position: relative;
          z-index: 5;
       }
    }
+
    @include xl {
-      .img_b{
+      .img_b {
          display: block;
       }
    }
+
    @include t {
-      .img_t{
+      .img_t {
          display: block;
       }
    }
-      @include mob {
-         .img_m{
-            display: block;
-         }
+
+   @include mob {
+      .img_m {
+         display: block;
       }
+   }
 
    .text {
       @include xl {
@@ -126,25 +135,31 @@ header {
       }
    }
 }
-h1{
+
+h1 {
    font-size: 50px;
 }
-#block1{
+
+#block1 {
    background: linear-gradient(117deg, #26241E 35.16%, #15130D 71.84%), #1F1E1B;
-   >img{
+
+   >img {
       position: absolute;
       bottom: 0;
       right: calc((100vw - $max-w-xl - 738px) / 2);
+
       @include mob-and-t {
          display: none;
       }
    }
-   .width{
+
+   .width {
       position: relative;
       z-index: 4;
    }
 }
-#services+a{
+
+#services+a {
    width: fit-content;
    margin: auto;
    margin-top: 35px;
@@ -152,90 +167,107 @@ h1{
    text-shadow: 0px 0px 5px rgba(252, 255, 212, 0.82);
    font-size: 15px;
 }
-#block2{
+
+#block2 {
    background: linear-gradient(107deg, #181616 -4.1%, #1B1A17 91.06%);
    padding-bottom: 0;
    overflow: hidden;
-   .flex{
+
+   .flex {
       display: flex;
       justify-content: center;
+
       @include t {
          display: block;
       }
    }
-   .img_and_t{
+
+   .img_and_t {
       @include xl {
          margin-bottom: -22px;
          margin-top: 65px;
       }
+
       @include t {
          margin-top: 80px;
       }
+
       @include mob {
-      margin-top: 45px;
+         margin-top: 45px;
       }
-      >img{
+
+      >img {
          @include t {
             width: 100%
          }
+
          @include mob {
             width: 100vw;
             margin: 0 -$pading-mob;
             margin-top: 65px;
          }
       }
+
       @include mob {
          width: 100%;
-         
+
       }
-   
-   .img_disck{
-      position: absolute;
-      right: 9%;
-      top: 43%;
-      z-index: 1;
-   }
-   .flexSB{
-      position: absolute;
-      @include xl {
-         top: 57px;
-         left: -35px;
-         right: -115px;
+
+      .img_disck {
+         position: absolute;
+         right: 9%;
+         top: 43%;
+         z-index: 1;
       }
-      @include mob-and-t {
-         width: 100%;
-      }
-      @include mob {
-         position: relative;
-         display: flex;
-         justify-content: space-between;
-      }
-      .text{
-         span{
-            color: #fff;
-            &::before{
-               content: "";
-               display: inline-block;
-               width: 3px;
-               height: 12px;
-               background: $yellow;
-               margin-right: 10px;
-               opacity: 1;
-               position: relative;
-               bottom: -3px;
+
+      .flexSB {
+         position: absolute;
+
+         @include xl {
+            top: 57px;
+            left: -35px;
+            right: -115px;
+         }
+
+         @include mob-and-t {
+            width: 100%;
+         }
+
+         @include mob {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+         }
+
+         .text {
+            span {
+               color: #fff;
+
+               &::before {
+                  content: "";
+                  display: inline-block;
+                  width: 3px;
+                  height: 12px;
+                  background: $yellow;
+                  margin-right: 10px;
+                  opacity: 1;
+                  position: relative;
+                  bottom: -3px;
+               }
             }
          }
       }
-   }
-      .icons{
+
+      .icons {
          margin-top: 14px;
          display: flex;
          column-gap: 14px;
       }
    }
-   
+
 }
-#achievements{
+
+#achievements {
    width: 50%;
    text-align: center;
    align-self: flex-end;
@@ -243,42 +275,222 @@ h1{
    flex-wrap: wrap;
    row-gap: 68px;
    align-items: baseline;
-   p{
+
+   p {
       width: 170px;
       font-size: 14px;
    }
 }
-#block3{
+
+#block3 {
    padding: 0;
    background-image: url(../img/home_img/backg_block3.png);
    background-position: center;
    background-size: cover;
-   
+
 }
-#coments{
-   @include paddings()
-   
-}
-#images_slider{
-   @include t {
-      max-width: 384px;
+
+#coments {
+   @include paddings();
+   .slide {
+      margin-top: 42px;
+      overflow-y: visible;
+      padding: 0 10px;
+      top: 0;
+
+      @include xl {
+         padding: 0 30px;
+      }
+
+      @include t {
+         max-width: 384px;
+      }
+
+      @include mob {
+         max-width: 278px;
+      }
    }
-   @include mob {
-      max-width: 278px;
-   }
 }
-.slide_img{
+#coments_slider{
+   position: relative;
+   overflow: hidden;
+}
+#images_slider.prev{
+   left: -1600px;
+}
+.slide_img {
    flex-shrink: 0;
+   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.35);
+   bottom: 0;
+   cursor: pointer;
+   transition: 1s;
+
    @include xl {
       max-width: 170px;
    }
+
    @include t {
       max-width: 177px;
    }
+
    @include mob {
       max-width: 124px;
    }
-   img{
+
+   img {
       width: 100%;
+   }
+
+   .cite {
+      position: absolute;
+      bottom: 18px;
+      left: 10px;
+      opacity: 1;
+      transition: 1s;
+      z-index: 4;
+      font-size: 13px;
+      color: #fff;
+
+      span {
+         font-size: 13px;
+         color: #ffffff64;
+
+         @include mob {
+            font-size: 12px;
+         }
+      }
+
+      @include xl {
+         left: 17px;
+      }
+   }
+
+   &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: 1;
+      background: linear-gradient(180deg, rgba(37, 37, 37, 0.75) 0%, rgba(27, 27, 27, 0.89) 100%);
+      z-index: 3;
+      transition: 1s;
+   }
+
+   &:hover {
+      box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0);
+      bottom: 40px;
+
+      &::before,
+      .cite {
+         opacity: 0;
+      }
+   }
+}
+
+[class^="slider-button"] {
+   cursor: pointer;
+   position: absolute;
+   left: 0;
+   z-index: 9;
+   transition: 1s;
+
+   @include t {
+      width: 20px;
+   }
+
+   @include mob-and-t {
+      top: -50px;
+      opacity: 0.3;
+      width: 13px;
+      // .prev &, .next &{
+      //    display: none;
+      // }
+   }
+   #images_slider &{
+      @include xl {
+         width: 42px;
+         opacity: 0.4;
+         top: calc(50% - 21px);
+      }
+
+      &:hover:not(.swiper-button-disabled) {
+         opacity: 1;
+      }
+   }
+   #video_slider &{
+      @include xl {
+         width: 22px;
+         top: calc(50% - 11px);
+      }
+   }
+
+   img {
+      width: 100%;
+   }
+}
+
+.slider-button-next {
+   left: auto;
+   right: 0;
+}
+
+.swiper-button-disabled {
+   cursor: default;
+
+   @include mob-and-t {
+      opacity: 0.07;
+   }
+   #video_slider &{
+      @include xl {
+         opacity: 0.4;
+      }
+   }
+}
+.video_slide{
+   aspect-ratio: 320/199;
+   position: relative;
+   @include xl {
+      max-width: 320px;
+      &::before{
+         content: "";
+         position: absolute;
+         left: 0;
+         right: 0;
+         top: 0;
+         bottom: 0;
+         width: 100%;
+         height: 100%;
+         border-radius: 0;
+         opacity: 1;
+         background: linear-gradient(0deg, rgba(19, 19, 19, 0.60) 0%, rgba(19, 19, 19, 0.60) 100%) ;
+         transition: opacity 1.5s, all 1s;
+      }
+      &:hover::before, &.active_video::before{
+         opacity: 0;
+         width: 0;
+         height: 0;
+         border-radius: 50%;
+         inset: 50%;
+      }
+   }
+   @include t {
+      max-width: 225px;
+   }
+   @include mob {
+      width: 100%
+   }
+   iframe{
+      width: 100%;
+      height: 100%;
+   }
+   
+   div{
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      border-left: 1px solid #fff;
+      position: absolute;
+      left: calc(100% - 8px);
+      top: calc(100% - 8px);
+      animation: loading_rotate 2s linear infinite;
    }
 }

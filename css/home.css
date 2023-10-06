@@ -1,3 +1,11 @@
+@keyframes loading_rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 header {
   background-image: url(../img/home_img/backg_header.png);
   background-size: cover;
@@ -286,20 +294,43 @@ h1 {
     padding: 55px 4.255vw;
   }
 }
-
+#coments .slide {
+  margin-top: 42px;
+  overflow-y: visible;
+  padding: 0 10px;
+  top: 0;
+}
+@media screen and (min-width: 1920px) {
+  #coments .slide {
+    padding: 0 30px;
+  }
+}
 @media screen and (min-width: 768px) and (max-width: 1919px) {
-  #images_slider {
+  #coments .slide {
     max-width: 384px;
   }
 }
 @media screen and (max-width: 767px) {
-  #images_slider {
+  #coments .slide {
     max-width: 278px;
   }
 }
 
+#coments_slider {
+  position: relative;
+  overflow: hidden;
+}
+
+#images_slider.prev {
+  left: -1600px;
+}
+
 .slide_img {
   flex-shrink: 0;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.35);
+  bottom: 0;
+  cursor: pointer;
+  transition: 1s;
 }
 @media screen and (min-width: 1920px) {
   .slide_img {
@@ -318,4 +349,158 @@ h1 {
 }
 .slide_img img {
   width: 100%;
+}
+.slide_img .cite {
+  position: absolute;
+  bottom: 18px;
+  left: 10px;
+  opacity: 1;
+  transition: 1s;
+  z-index: 4;
+  font-size: 13px;
+  color: #fff;
+}
+.slide_img .cite span {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.3921568627);
+}
+@media screen and (max-width: 767px) {
+  .slide_img .cite span {
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .slide_img .cite {
+    left: 17px;
+  }
+}
+.slide_img::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 1;
+  background: linear-gradient(180deg, rgba(37, 37, 37, 0.75) 0%, rgba(27, 27, 27, 0.89) 100%);
+  z-index: 3;
+  transition: 1s;
+}
+.slide_img:hover {
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0);
+  bottom: 40px;
+}
+.slide_img:hover::before,
+.slide_img:hover .cite {
+  opacity: 0;
+}
+
+[class^=slider-button] {
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+  z-index: 9;
+  transition: 1s;
+}
+@media screen and (min-width: 768px) and (max-width: 1919px) {
+  [class^=slider-button] {
+    width: 20px;
+  }
+}
+@media screen and (max-width: 1919px) {
+  [class^=slider-button] {
+    top: -50px;
+    opacity: 0.3;
+    width: 13px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #images_slider [class^=slider-button] {
+    width: 42px;
+    opacity: 0.4;
+    top: calc(50% - 21px);
+  }
+}
+#images_slider [class^=slider-button]:hover:not(.swiper-button-disabled) {
+  opacity: 1;
+}
+@media screen and (min-width: 1920px) {
+  #video_slider [class^=slider-button] {
+    width: 22px;
+    top: calc(50% - 11px);
+  }
+}
+[class^=slider-button] img {
+  width: 100%;
+}
+
+.slider-button-next {
+  left: auto;
+  right: 0;
+}
+
+.swiper-button-disabled {
+  cursor: default;
+}
+@media screen and (max-width: 1919px) {
+  .swiper-button-disabled {
+    opacity: 0.07;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #video_slider .swiper-button-disabled {
+    opacity: 0.4;
+  }
+}
+
+.video_slide {
+  aspect-ratio: 320/199;
+  position: relative;
+}
+@media screen and (min-width: 1920px) {
+  .video_slide {
+    max-width: 320px;
+  }
+  .video_slide::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    opacity: 1;
+    background: linear-gradient(0deg, rgba(19, 19, 19, 0.6) 0%, rgba(19, 19, 19, 0.6) 100%);
+    transition: opacity 1.5s, all 1s;
+  }
+  .video_slide:hover::before, .video_slide.active_video::before {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    inset: 50%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1919px) {
+  .video_slide {
+    max-width: 225px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .video_slide {
+    width: 100%;
+  }
+}
+.video_slide iframe {
+  width: 100%;
+  height: 100%;
+}
+.video_slide div {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border-left: 1px solid #fff;
+  position: absolute;
+  left: calc(100% - 8px);
+  top: calc(100% - 8px);
+  animation: loading_rotate 2s linear infinite;
 }/*# sourceMappingURL=home.css.map */

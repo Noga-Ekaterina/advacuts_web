@@ -345,6 +345,12 @@ h2{
       position: relative;
       left: 0;
    }
+   &.next{
+      left: 100%;
+   }
+   &.prev{
+      left: -100%;
+   }
 }
 #services{
    overflow: hidden;
@@ -359,12 +365,7 @@ h2{
          gap: 20px;
       }
    }
-   .next{
-      left: 100%;
-   }
-   .prev{
-      left: -100%;
-   }
+   
 }
 .service{
    border-radius: 3px;

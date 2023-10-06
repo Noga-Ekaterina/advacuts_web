@@ -17,3 +17,12 @@ $max-w-xl: 1920px - 375px * 2;
       padding: 55px $pading-mob;
    }
 }
+
+@keyframes loading_rotate {
+   0%{
+      transform: rotate(0deg);
+   }
+   100%{
+      transform: rotate(360deg);
+   }
+}
