@@ -503,4 +503,10 @@ h1 {
   left: calc(100% - 8px);
   top: calc(100% - 8px);
   animation: loading_rotate 2s linear infinite;
+}
+
+.disabled_btn_active_video {
+  cursor: default;
+  color: #FCFFD4;
+  opacity: 0.3;
 }/*# sourceMappingURL=home.css.map */

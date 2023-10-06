@@ -494,3 +494,8 @@ h1 {
       animation: loading_rotate 2s linear infinite;
    }
 }
+.disabled_btn_active_video{
+   cursor: default;
+   color: $yellow;
+   opacity: 0.3;
+}

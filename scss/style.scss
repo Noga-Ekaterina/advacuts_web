@@ -458,15 +458,17 @@ h2{
       border: 0;
       color: $yellow;
       opacity: 0.5;
-      cursor: pointer;
       transition: 1s;
-   
-      &[disabled], &:hover{
-         color: #fff;
-         opacity: 1;
+      &:not([disabled]){
+         cursor: pointer;
       }
-      &[disabled]{
-         cursor: auto;
+      &[disabled], &:hover{
+         &:not(.disabled_btn_active_video){
+            color: #fff;
+            opacity: 1;
+         }
+      }
+      &[disabled]:not(.disabled_btn_active_video){
          &+.nav_line {
             div{
                left: 0;
