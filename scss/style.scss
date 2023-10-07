@@ -457,10 +457,10 @@ h2{
       background: none;
       border: 0;
       color: $yellow;
-      opacity: 0.5;
       transition: 1s;
       &:not([disabled]){
-         cursor: pointer;
+      opacity: 0.5;
+      cursor: pointer;
       }
       &[disabled], &:hover{
          &:not(.disabled_btn_active_video){

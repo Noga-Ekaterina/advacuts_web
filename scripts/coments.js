@@ -41,32 +41,15 @@ const players = document.querySelectorAll('.video_slide>iframe');
 
 
 
-var player;
-var player2;
-var player3;
-var player4;
-
+let playersAPI = [];
 
 function onYouTubeIframeAPIReady() {
-   player = new YT.Player('player', {
-      events: {
-         'onStateChange': onPlayerStateChange
-      }
-   });
-   player2 = new YT.Player('player2', {
-      events: {
-         'onStateChange': onPlayerStateChange
-      }
-   });
-   player3 = new YT.Player('player3', {
-      events: {
-         'onStateChange': onPlayerStateChange
-      }
-   });
-   player4 = new YT.Player('player4', {
-      events: {
-         'onStateChange': onPlayerStateChange
-      }
+   players.forEach((el, index) => {
+      playersAPI[index] = new YT.Player(el.id, {
+         events: {
+            'onStateChange': onPlayerStateChange
+         }
+      });
    });
 }
 
@@ -82,15 +65,26 @@ function checkStateVideo(stateVideo, div) {
    }
 }
 
-function stopVideos(stateVideo, video){
-   if(stateVideo==1){players.forEach((el, index)=>{
-      if (index != el.indexOf(video)){
-         el.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
-      }
-   })}
+function stopVideos(stateVideo, video) {
+   if (stateVideo == 1) {
+      players.forEach((el, index) => {
+         if (el.id != video.id) {
+            el.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+         }
+      })
+   }
 }
 
 function onPlayerStateChange(event) {
    checkStateVideo(event.data, event.target.getIframe().parentNode);
    stopVideos(event.data, event.target.getIframe())
 }
+function btnStopVideo(){
+   players.forEach((el)=>{
+      el.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+   })
+}
+let btnsSliderVideo = videoSlider.querySelectorAll('[class^="slider-button"]');
+btnsSliderVideo.forEach((btn)=>{
+   btn.onclick= btnStopVideo
+});

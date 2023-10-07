@@ -292,6 +292,14 @@ h1 {
 
 #coments {
    @include paddings();
+   .nav_slider{
+      @include mob-and-t {
+         z-index: 6;
+         position: relative;
+         width: fit-content;
+         margin: 0 auto -20px;
+      }
+   }
    .slide {
       margin-top: 42px;
       overflow-y: visible;
@@ -302,9 +310,7 @@ h1 {
          padding: 0 30px;
       }
 
-      @include t {
-         max-width: 384px;
-      }
+      
 
       @include mob {
          max-width: 278px;
@@ -314,9 +320,15 @@ h1 {
 #coments_slider{
    position: relative;
    overflow: hidden;
+   z-index: 1;
 }
-#images_slider.prev{
-   left: -1600px;
+#images_slider{
+   @include t {
+      max-width: 384px;
+   }
+   .prev{
+      left: -1600px;
+   }
 }
 .slide_img {
    flex-shrink: 0;
@@ -377,8 +389,9 @@ h1 {
 
    &:hover {
       box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0);
-      bottom: 40px;
-
+      @include xl {
+         bottom: 40px;
+      }
       &::before,
       .cite {
          opacity: 0;
@@ -398,12 +411,9 @@ h1 {
    }
 
    @include mob-and-t {
-      top: -50px;
+      top: -42px;
       opacity: 0.3;
       width: 13px;
-      // .prev &, .next &{
-      //    display: none;
-      // }
    }
    #images_slider &{
       @include xl {
@@ -435,7 +445,7 @@ h1 {
 
 .swiper-button-disabled {
    cursor: default;
-
+   z-index: -1;
    @include mob-and-t {
       opacity: 0.07;
    }
@@ -473,7 +483,8 @@ h1 {
       }
    }
    @include t {
-      max-width: 225px;
+      width: calc(100% - 50px);
+      max-width: 280px;
    }
    @include mob {
       width: 100%
@@ -497,5 +508,18 @@ h1 {
 .disabled_btn_active_video{
    cursor: default;
    color: $yellow;
-   opacity: 0.3;
+   opacity: 0.2;
+}
+.block_disabled{
+   @extend [class^="slider-button"];
+   display: none;
+   opacity: 0;
+   cursor: default;
+   aspect-ratio: 1/1;
+   .swiper-button-disabled+&{
+      display: block;
+   }
+   .slider-button-next+&{
+      @extend .slider-button-next
+   }
 }
