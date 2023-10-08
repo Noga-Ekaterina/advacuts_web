@@ -523,3 +523,47 @@ h1 {
       @extend .slider-button-next
    }
 }
+#coment_modal{
+   padding-top: 30px;
+   width: fit-content;
+   opacity: 1;
+   transition: opacity 200ms;
+   @include mob {
+      max-width: calc(100vw - 44px);
+   }
+   #coment_img{
+      max-width: 480px;
+      width: 100%;
+   }
+   h2, p{
+      margin: 15px auto;
+      text-align: center;
+   }
+   button{
+      position: fixed;
+      left: 0;
+      background: none;
+      border: 0;
+      opacity: 1;
+      cursor: pointer;
+      @include xl {
+         width: 44px;
+         top: calc(50vh - 22px);
+      }
+      @include mob-and-t {
+         top: calc(50vh - 11px);
+         width: 22px;
+      }
+      img{
+         width: 100%;
+      }
+      &[disabled]{
+         cursor: default;
+         opacity: 0.4;
+      }
+   }
+   .coment_moda_btn_next{
+      right: 0;
+      left: auto;
+   }
+}

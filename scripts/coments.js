@@ -37,54 +37,64 @@ var swiperImg = new Swiper("#video_slider", {
    },
 });
 
-const players = document.querySelectorAll('.video_slide>iframe');
 
+const arrComents =[
+   "Вероника Медведева",
+   "Виктория Веселова",
+   "Виктория Веселова",
+   "Константин Щербаков",
+   "Елена Алексеева",
+   "Инна Андреев",
+   "Константин Щербаков",
+   "Вероника Медведева",
+];
+const comentsImg = document.querySelectorAll('.slide_img');
+const comentModal = document.querySelector('#coment_modal');
+const comentH = document.querySelector('#coment_h');
+const comentP = document.querySelector('#coment_p');
+const comentModalImg = document.querySelector('#coment_img');
+const btnPrevComentModal =document.querySelector('.coment_moda_btn_prev');
+const btnNextComentModal =document.querySelector('.coment_moda_btn_next');
 
-
-let playersAPI = [];
-
-function onYouTubeIframeAPIReady() {
-   players.forEach((el, index) => {
-      playersAPI[index] = new YT.Player(el.id, {
-         events: {
-            'onStateChange': onPlayerStateChange
-         }
-      });
-   });
-}
-
-function checkStateVideo(stateVideo, div) {
-   if (stateVideo <= 0 || stateVideo == 2 || stateVideo == 5) {
-      div.classList.remove("active_video");
-      btnImg.classList.remove("disabled_btn_active_video");
-      btnImg.removeAttribute("disabled");
+let comentImgActive;
+comentsImg. forEach((slide, index)=>{
+   slide.onclick=()=>{
+      comentImgActive=index;
+      shadowBlock.style.display = "flex";
+      comentModal.style.display = "block";
+      showComent()
+   }
+})
+function showComent(){
+   let elActive=comentsImg[comentImgActive];
+   comentH.innerHTML= arrComents[comentImgActive];
+   comentP.innerHTML= elActive.querySelector('span').innerHTML;
+   comentModalImg.setAttribute("src", elActive.querySelector("img").src);
+   if(comentImgActive>0){
+      btnPrevComentModal.removeAttribute("disabled")
+   }else{
+      btnPrevComentModal.setAttribute("disabled", "true")
+   }
+   if (comentImgActive>=comentsImg.length -1) {
+      btnNextComentModal.setAttribute("disabled", "true")
    } else {
-      div.classList.add("active_video");
-      btnImg.classList.add("disabled_btn_active_video");
-      btnImg.setAttribute("disabled", "true")
+      btnNextComentModal.removeAttribute("disabled")
    }
 }
+function newComentImgActive(index){
+   comentImgActive= comentImgActive+index;
+   showComent();
+   comentModal.style.opacity= "0";
+   setTimeout(() => {
+      comentModal.style.opacity= ""   
+   }, 200);
+}
+const comentImgNext =()=> newComentImgActive(1);
+const comentImgPrev =()=> newComentImgActive(-1);
+btnPrevComentModal.onclick= comentImgPrev;
+btnNextComentModal.onclick= comentImgNext;
 
-function stopVideos(stateVideo, video) {
-   if (stateVideo == 1) {
-      players.forEach((el, index) => {
-         if (el.id != video.id) {
-            el.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
-         }
-      })
-   }
-}
-
-function onPlayerStateChange(event) {
-   checkStateVideo(event.data, event.target.getIframe().parentNode);
-   stopVideos(event.data, event.target.getIframe())
-}
-function btnStopVideo(){
-   players.forEach((el)=>{
-      el.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
-   })
-}
-let btnsSliderVideo = videoSlider.querySelectorAll('[class^="slider-button"]');
-btnsSliderVideo.forEach((btn)=>{
-   btn.onclick= btnStopVideo
-});
+document.querySelector('#close_coment_modal').onclick = function () {
+   shadowBlock.style.display = "";
+   comentModal.style.display = "";
+};

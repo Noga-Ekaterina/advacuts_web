@@ -152,7 +152,8 @@ header a {
     -moz-column-gap: 58px;
          column-gap: 58px;
   }
-  #h_icons .disck, #h_icons .line {
+  #h_icons .disck,
+  #h_icons .line {
     display: none;
   }
 }
@@ -353,7 +354,8 @@ header a {
   }
 }
 
-#open_menu, #close {
+#open_menu,
+#close {
   cursor: pointer;
 }
 
@@ -545,8 +547,7 @@ h2 {
   background: rgba(26, 25, 22, 0.84);
   z-index: 999999;
 }
-
-#service_descr {
+#shadow_block > div {
   position: relative;
   border-radius: 35px 0 0 0;
   background: linear-gradient(214deg, #2D2B23 9.6%, #292923 108.65%);
@@ -555,6 +556,7 @@ h2 {
   max-height: 100%;
   overflow-y: auto;
 }
+
 @media screen and (max-width: 1919px) {
   #service_descr img {
     display: none;
@@ -579,7 +581,7 @@ h2 {
   margin-top: 35px;
 }
 
-#close_descr {
+.close {
   position: absolute;
   top: 20px;
   right: 17px;
@@ -594,7 +596,7 @@ h2 {
   cursor: pointer;
   transition: 0.7s;
 }
-#close_descr:hover {
+.close:hover {
   background: rgba(0, 0, 0, 0.4);
   width: 34px;
   font-size: 32px !important;

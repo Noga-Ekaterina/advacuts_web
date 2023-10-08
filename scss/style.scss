@@ -6,7 +6,7 @@
 * {
    margin: 0;
    padding: 0;
-   font-family:  PT Serif;
+   font-family: PT Serif;
    font-size: 16px;
    font-weight: 400;
 }
@@ -110,6 +110,7 @@ header {
 
    .menu {
       list-style: none;
+
       @include t {
          font-size: 14px;
       }
@@ -119,6 +120,7 @@ header {
       text-decoration: none;
    }
 }
+
 #h_icons {
    display: flex;
 
@@ -126,26 +128,33 @@ header {
       flex-direction: column;
       align-items: center;
    }
+
    @include t {
       position: absolute;
       bottom: 10px;
       column-gap: 58px;
-      .disck, .line{
+
+      .disck,
+      .line {
          display: none;
       }
    }
+
    @include mob {
       display: none;
    }
-   a{
+
+   a {
       @include xl {
          margin: 17.5px 0;
          width: 25px;
       }
+
       @include t {
          width: 23px;
       }
-      img{
+
+      img {
          width: 100%;
       }
    }
@@ -187,9 +196,10 @@ header {
       transition: 2s;
       box-shadow: -36px 0px 17px 5px rgba(14, 15, 15, 0.72);
 
-      .darck &{
+      .darck & {
          background: #1e1d1c;
       }
+
       width: 100%;
       height: 100%;
       padding: 50px 70px;
@@ -203,21 +213,26 @@ header {
       li {
          margin-bottom: 30px;
       }
-      .contackt{
+
+      .contackt {
          margin-top: 45px;
       }
    }
-   #close{
+
+   #close {
       position: absolute;
       left: 75vw;
       top: 30px;
       font-size: 45px;
+
       @include t-u {
          display: none;
       }
    }
-   .logo{
+
+   .logo {
       margin-bottom: 46px;
+
       @include t-u {
          display: none;
       }
@@ -277,11 +292,12 @@ header {
       justify-content: space-between;
    }
 }
+
 .a_be {
    margin-top: 45px;
 
    @include mob {
-      header &{
+      header & {
          display: none;
       }
    }
@@ -306,7 +322,7 @@ header {
          left: -35px;
       }
 
-      &.be_phone::before{
+      &.be_phone::before {
          content: url(../img/home_img/phone-call\ 1.png);
       }
 
@@ -315,7 +331,8 @@ header {
       }
    }
 }
-.border_gradient{
+
+.border_gradient {
    border-bottom: 2px solid transparent;
    border-image: linear-gradient(90deg, #FCFFD4 0%, #383921 101.45%);
    border-image-slice: 1;
@@ -324,65 +341,80 @@ header {
    width: fit-content;
    text-decoration: none;
 }
+
 .yes_small,
 #open_menu {
    @include t-u {
       display: none !important;
    }
 }
-#open_menu, #close{
+
+#open_menu,
+#close {
    cursor: pointer;
 }
-h2{
+
+h2 {
    font-size: 30px;
    text-align: center;
    margin-bottom: 15px;
 }
-.slide{
+
+.slide {
    position: absolute;
    transition: 1s;
-   &.active{
+
+   &.active {
       position: relative;
       left: 0;
    }
-   &.next{
+
+   &.next {
       left: 100%;
    }
-   &.prev{
+
+   &.prev {
       left: -100%;
    }
 }
-#services{
+
+#services {
    overflow: hidden;
    position: relative;
-   .flexSB{
+
+   .flexSB {
       flex-wrap: wrap;
       width: 100%;
+
       @include xl {
          gap: 30px;
       }
+
       @include t {
          gap: 20px;
       }
    }
-   
+
 }
-.service{
+
+.service {
    border-radius: 3px;
    background: #2C2B29;
    background-image: url(../img/Ellipse_service.png);
    background-position: right bottom;
    background-repeat: no-repeat;
    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.20);
+
    @include mob-and-t {
       background-position: calc(100% + 8px) calc(100% + 8px);
    }
+
    box-sizing: border-box;
    padding: 30px 22px;
    position: relative;
    cursor: pointer;
 
-   &::before{
+   &::before {
       position: absolute;
       left: 0;
       top: 0;
@@ -393,10 +425,11 @@ h2{
       height: 0;
       opacity: 0;
       border-radius: 0 0 50% 0;
-      transition: width 1s, height 1s, opacity 2s, border-radius 1s ;
+      transition: width 1s, height 1s, opacity 2s, border-radius 1s;
       z-index: 1;
    }
-   *{
+
+   * {
       position: relative;
       z-index: 9;
    }
@@ -405,37 +438,45 @@ h2{
    @include xl {
       width: calc((100% - 60px) / 3);
    }
+
    @include t {
       width: calc((100% - 20px) / 2);
-      
+
    }
+
    @include mob {
       margin-bottom: 25px;
       padding: 24px 8px;
    }
-   img{
+
+   img {
       float: left;
    }
-   .line{
+
+   .line {
       width: 106px;
       height: 2px;
       background: rgba(255, 255, 255, 0.30);
       clear: both;
       margin-top: 15px;
    }
+
    .service_h {
       margin-bottom: 10px;
-      p{
+
+      p {
          font-size: 20px;
          margin-left: 36px;
       }
    }
-   >p{
+
+   >p {
       max-width: 310px;
       font-size: 15px;
    }
-   &:hover{
-      &::before{
+
+   &:hover {
+      &::before {
          bottom: 0;
          right: 0;
          width: 100%;
@@ -446,45 +487,54 @@ h2{
 
    }
 }
-.nav_slider{
+
+.nav_slider {
    display: flex;
    justify-content: center;
    column-gap: 14px;
    align-items: center;
    margin-bottom: 30px;
-   button{
+
+   button {
       font-size: 14px;
       background: none;
       border: 0;
       color: $yellow;
       transition: 1s;
-      &:not([disabled]){
-      opacity: 0.5;
-      cursor: pointer;
+
+      &:not([disabled]) {
+         opacity: 0.5;
+         cursor: pointer;
       }
-      &[disabled], &:hover{
-         &:not(.disabled_btn_active_video){
+
+      &[disabled],
+      &:hover {
+         &:not(.disabled_btn_active_video) {
             color: #fff;
             opacity: 1;
          }
       }
-      &[disabled]:not(.disabled_btn_active_video){
+
+      &[disabled]:not(.disabled_btn_active_video) {
          &+.nav_line {
-            div{
+            div {
                left: 0;
             }
-            &::before{
+
+            &::before {
                width: 0;
             }
          }
       }
    }
-   .nav_line{
+
+   .nav_line {
       height: 2px;
       width: 30px;
       position: relative;
       background: linear-gradient(90deg, #FCFFD4 0%, rgba(0, 0, 0, 0.00) 98.7%);
-      &::before{
+
+      &::before {
          content: '';
          background: linear-gradient(270deg, #FCFFD4 0%, rgba(0, 0, 0, 0.8) 98.7%);
          position: absolute;
@@ -495,7 +545,8 @@ h2{
          transition: 1s;
          z-index: 1;
       }
-      div{
+
+      div {
          border-radius: 50%;
          width: 5px;
          height: 5px;
@@ -506,10 +557,11 @@ h2{
          transition: 1s;
          z-index: 2;
       }
-   
+
    }
 }
-#shadow_block{
+
+#shadow_block {
    position: fixed;
    inset: 0;
    display: none;
@@ -517,38 +569,49 @@ h2{
    align-items: center;
    background: rgba(26, 25, 22, 0.84);
    z-index: 999999;
+
+   >div {
+      position: relative;
+      border-radius: 35px 0 0 0;
+      background: linear-gradient(214deg, #2D2B23 9.6%, #292923 108.65%);
+      box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.33);
+      display: none;
+      max-height: 100%;
+      overflow-y: auto;
+   }
 }
-#service_descr{
-   position: relative;
-   border-radius: 35px 0 0 0;
-   background: linear-gradient(214deg, #2D2B23 9.6%, #292923 108.65%);
-   box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.33);
-   display: none;
-   max-height: 100%;
-   overflow-y: auto;
+
+#service_descr {
+
    @include mob-and-t {
-      img{
+      img {
          display: none;
       }
    }
-   .block_text{
+
+   .block_text {
       margin: 66px;
+
       @include t-u {
          width: 436px;
       }
    }
-   h2{
+
+   h2 {
       margin-bottom: 45px;
       text-align: left;
    }
-   p{
+
+   p {
       margin-bottom: 20px
    }
-   .a_be{
+
+   .a_be {
       margin-top: 35px;
    }
 }
-#close_descr{
+
+.close {
    position: absolute;
    top: 20px;
    right: 17px;
@@ -562,18 +625,21 @@ h2{
    text-align: center;
    cursor: pointer;
    transition: 0.7s;
-   &:hover{
+
+   &:hover {
       background: rgba(0, 0, 0, 0.4);
       width: 34px;
       font-size: 32px !important;
    }
 }
-.no_xl{
+
+.no_xl {
    @include xl {
       display: none !important;
    }
 }
-.yes_xl{
+
+.yes_xl {
    @include mob-and-t {
       display: none;
    }

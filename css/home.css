@@ -535,4 +535,55 @@ h1 {
 }
 .swiper-button-disabled + .block_disabled {
   display: block;
+}
+#coment_modal {
+  padding-top: 30px;
+  width: -moz-fit-content;
+  width: fit-content;
+  opacity: 1;
+  transition: opacity 200ms;
+}
+@media screen and (max-width: 767px) {
+  #coment_modal {
+    max-width: calc(100vw - 44px);
+  }
+}
+#coment_modal #coment_img {
+  max-width: 480px;
+  width: 100%;
+}
+#coment_modal h2, #coment_modal p {
+  margin: 15px auto;
+  text-align: center;
+}
+#coment_modal button {
+  position: fixed;
+  left: 0;
+  background: none;
+  border: 0;
+  opacity: 1;
+  cursor: pointer;
+}
+@media screen and (min-width: 1920px) {
+  #coment_modal button {
+    width: 44px;
+    top: calc(50vh - 22px);
+  }
+}
+@media screen and (max-width: 1919px) {
+  #coment_modal button {
+    top: calc(50vh - 11px);
+    width: 22px;
+  }
+}
+#coment_modal button img {
+  width: 100%;
+}
+#coment_modal button[disabled] {
+  cursor: default;
+  opacity: 0.4;
+}
+#coment_modal .coment_moda_btn_next {
+  right: 0;
+  left: auto;
 }/*# sourceMappingURL=home.css.map */
