@@ -564,13 +564,13 @@ h1 {
   opacity: 1;
   cursor: pointer;
 }
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 768px) {
   #coment_modal button {
     width: 44px;
     top: calc(50vh - 22px);
   }
 }
-@media screen and (max-width: 1919px) {
+@media screen and (max-width: 767px) {
   #coment_modal button {
     top: calc(50vh - 11px);
     width: 22px;

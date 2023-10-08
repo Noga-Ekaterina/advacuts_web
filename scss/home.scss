@@ -546,11 +546,11 @@ h1 {
       border: 0;
       opacity: 1;
       cursor: pointer;
-      @include xl {
+      @include t-u {
          width: 44px;
          top: calc(50vh - 22px);
       }
-      @include mob-and-t {
+      @include mob {
          top: calc(50vh - 11px);
          width: 22px;
       }
