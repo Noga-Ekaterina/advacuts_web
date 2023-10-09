@@ -60,6 +60,7 @@ let comentImgActive;
 comentsImg. forEach((slide, index)=>{
    slide.onclick=()=>{
       comentImgActive=index;
+      body.style.overflow="hidden"
       shadowBlock.style.display = "flex";
       comentModal.style.display = "block";
       showComent()
@@ -95,6 +96,7 @@ btnPrevComentModal.onclick= comentImgPrev;
 btnNextComentModal.onclick= comentImgNext;
 
 document.querySelector('#close_coment_modal').onclick = function () {
+   body.style.overflow=""
    shadowBlock.style.display = "";
    comentModal.style.display = "";
 };

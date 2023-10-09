@@ -5,7 +5,6 @@ const slideCompany = document.querySelector('#service_company');
 
 const servicesSliber = new Sliders2Slide(btnFiz, btnCompany, slideFiz, slideCompany);
 servicesSliber.click();
-const shadowBlock = document.querySelector('#shadow_block');
 const serviceDescr = document.querySelector('#service_descr');
 const modalsServices = {
    "Consumer protection": [
@@ -75,6 +74,7 @@ for (let key in modalsServices) {
 }
 
 function checkText(modalService) {
+   body.style.overflow="hidden"
    shadowBlock.style.display = "flex";
    serviceDescr.style.display = "flex";
 
@@ -85,6 +85,7 @@ function checkText(modalService) {
 }
 
 document.querySelector('#close_descr').onclick = function () {
+   body.style.overflow=""
    shadowBlock.style.display = "";
    serviceDescr.style.display = "";
 };
