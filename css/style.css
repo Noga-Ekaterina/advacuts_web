@@ -16,6 +16,10 @@
   font-weight: 400;
 }
 
+body {
+  overflow: hidden;
+}
+
 .preloader {
   /*фиксированное позиционирование*/
   position: fixed;
@@ -77,6 +81,9 @@
   opacity: 0;
 }
 
+.loaded {
+  overflow: scroll;
+}
 .loaded .preloader {
   display: none;
 }
@@ -96,7 +103,7 @@
 }
 @media screen and (max-width: 767px) {
   .width {
-    max-width: 600px;
+    max-width: 480px;
   }
 }
 
@@ -623,6 +630,9 @@ h2 {
   overflow-y: auto;
 }
 
+#service_descr img {
+  height: 454px;
+}
 @media screen and (max-width: 1919px) {
   #service_descr img {
     display: none;
@@ -642,6 +652,13 @@ h2 {
 }
 #service_descr p {
   margin-bottom: 20px;
+  color: #fff;
+  opacity: 0.4;
+}
+@media screen and (min-width: 1920px) {
+  #service_descr p {
+    font-size: 14px;
+  }
 }
 #service_descr .a_be {
   margin-top: 35px;
@@ -657,7 +674,7 @@ h2 {
   font-size: 16px;
   padding: 2px;
   aspect-ratio: 1/1;
-  width: 19px;
+  width: 20px;
   text-align: center;
   cursor: pointer;
   transition: 0.7s;
@@ -665,7 +682,7 @@ h2 {
 .close:hover {
   background: rgba(0, 0, 0, 0.4);
   width: 34px;
-  font-size: 32px !important;
+  font-size: 25px !important;
 }
 
 @media screen and (min-width: 1920px) {

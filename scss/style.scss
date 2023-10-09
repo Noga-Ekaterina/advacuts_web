@@ -10,6 +10,9 @@
    font-size: 16px;
    font-weight: 400;
 }
+body{
+   overflow: hidden;
+}
 .preloader {
    /*фиксированное позиционирование*/
    position: fixed;
@@ -76,9 +79,12 @@
    opacity: 0;
  }
  
- .loaded .preloader {
-   display: none;
- }
+ .loaded {
+   overflow: scroll;
+   .preloader {
+      display: none;
+   }
+}
 
 .width {
    margin: auto;
@@ -92,7 +98,7 @@
    }
 
    @include mob {
-      max-width: 600px;
+      max-width: 480px;
    }
 }
 
@@ -652,8 +658,9 @@ h2 {
 
 #service_descr {
 
-   @include mob-and-t {
-      img {
+   img {
+      height: 454px;
+      @include mob-and-t {
          display: none;
       }
    }
@@ -672,12 +679,18 @@ h2 {
    }
 
    p {
-      margin-bottom: 20px
+      margin-bottom: 20px;
+      color: #fff;
+      opacity: 0.4;
+      @include xl {
+         font-size: 14px
+      }
    }
 
    .a_be {
       margin-top: 35px;
    }
+   
 }
 
 .close {
@@ -690,7 +703,7 @@ h2 {
    font-size: 16px;
    padding: 2px;
    aspect-ratio: 1/1;
-   width: 19px;
+   width: 20px;
    text-align: center;
    cursor: pointer;
    transition: 0.7s;
@@ -698,7 +711,7 @@ h2 {
    &:hover {
       background: rgba(0, 0, 0, 0.4);
       width: 34px;
-      font-size: 32px !important;
+      font-size: 25px !important;
    }
 }
 

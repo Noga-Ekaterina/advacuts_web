@@ -1,0 +1,276 @@
+#coments{
+   .nav_slider{
+      @include mob-and-t {
+         z-index: 6;
+         position: relative;
+         width: fit-content;
+         margin: 0 auto -20px;
+      }
+   }
+   .slide {
+      margin-top: 42px;
+      overflow-y: visible;
+      padding: 0 10px;
+      top: 0;
+
+      @include xl {
+         padding: 0 30px;
+      }
+
+      
+
+      @include mob {
+         max-width: 278px;
+      }
+   }
+}
+#coments_slider{
+   position: relative;
+   overflow: hidden;
+   z-index: 1;
+}
+#images_slider{
+   @include t {
+      max-width: 384px;
+   }
+   .prev{
+      left: -1600px;
+   }
+}
+.slide_img {
+   flex-shrink: 0;
+   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.35);
+   bottom: 0;
+   cursor: pointer;
+   transition: 1s;
+
+   @include xl {
+      max-width: 170px;
+   }
+
+   @include t {
+      max-width: 177px;
+   }
+
+   @include mob {
+      max-width: 124px;
+   }
+
+   img {
+      width: 100%;
+   }
+
+   .cite {
+      position: absolute;
+      bottom: 18px;
+      left: 10px;
+      opacity: 1;
+      transition: 1s;
+      z-index: 4;
+      font-size: 13px;
+      color: #fff;
+
+      span {
+         font-size: 13px;
+         color: #ffffff64;
+
+         @include mob {
+            font-size: 12px;
+         }
+      }
+
+      @include xl {
+         left: 17px;
+      }
+   }
+
+   &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: 1;
+      background: linear-gradient(180deg, rgba(37, 37, 37, 0.75) 0%, rgba(27, 27, 27, 0.89) 100%);
+      z-index: 3;
+      transition: 1s;
+   }
+
+   &:hover {
+      box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0);
+      @include xl {
+         bottom: 40px;
+      }
+      &::before,
+      .cite {
+         opacity: 0;
+      }
+   }
+}
+
+[class^="slider-button"] {
+   cursor: pointer;
+   position: absolute;
+   left: 0;
+   z-index: 9;
+   transition: 1s;
+
+   @include t {
+      width: 20px;
+   }
+
+   @include mob-and-t {
+      top: -42px;
+      opacity: 0.3;
+      width: 13px;
+   }
+   #images_slider &{
+      @include xl {
+         width: 42px;
+         opacity: 0.4;
+         top: calc(50% - 21px);
+      }
+
+      &:hover:not(.swiper-button-disabled) {
+         opacity: 1;
+      }
+   }
+   #video_slider &{
+      @include xl {
+         width: 22px;
+         top: calc(50% - 11px);
+      }
+   }
+
+   img {
+      width: 100%;
+   }
+}
+
+.slider-button-next {
+   left: auto;
+   right: 0;
+}
+
+.swiper-button-disabled {
+   cursor: default;
+   z-index: -1;
+   @include mob-and-t {
+      opacity: 0.07;
+   }
+   #video_slider &{
+      @include xl {
+         opacity: 0.4;
+      }
+   }
+}
+.video_slide{
+   aspect-ratio: 320/199;
+   position: relative;
+   @include xl {
+      max-width: 320px;
+      &::before{
+         content: "";
+         position: absolute;
+         left: 0;
+         right: 0;
+         top: 0;
+         bottom: 0;
+         width: 100%;
+         height: 100%;
+         border-radius: 0;
+         opacity: 1;
+         background: linear-gradient(0deg, rgba(19, 19, 19, 0.60) 0%, rgba(19, 19, 19, 0.60) 100%) ;
+         transition: opacity 1.5s, all 1s;
+      }
+      &:hover::before, &.active_video::before{
+         opacity: 0;
+         width: 0;
+         height: 0;
+         border-radius: 50%;
+         inset: 50%;
+      }
+   }
+   @include t {
+      width: calc(100% - 50px);
+      max-width: 280px;
+   }
+   @include mob {
+      width: 100%
+   }
+   iframe{
+      width: 100%;
+      height: 100%;
+   }
+   
+   div{
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      border-left: 1px solid #fff;
+      position: absolute;
+      left: calc(100% - 8px);
+      top: calc(100% - 8px);
+      animation: loading_rotate 2s linear infinite;
+   }
+}
+.disabled_btn_active_video{
+   cursor: default;
+   color: $yellow;
+   opacity: 0.2;
+}
+.block_disabled{
+   @extend [class^="slider-button"];
+   display: none;
+   opacity: 0;
+   cursor: default;
+   aspect-ratio: 1/1;
+   .swiper-button-disabled+&{
+      display: block;
+   }
+   .slider-button-next+&{
+      @extend .slider-button-next
+   }
+}
+#coment_modal{
+   padding-top: 30px;
+   width: fit-content;
+   opacity: 1;
+   transition: opacity 200ms;
+   @include mob {
+      max-width: calc(100vw - 44px);
+   }
+   #coment_img{
+      max-width: 480px;
+      width: 100%;
+   }
+   h2, p{
+      margin: 15px auto;
+      text-align: center;
+   }
+   button{
+      position: fixed;
+      left: 0;
+      background: none;
+      border: 0;
+      opacity: 1;
+      cursor: pointer;
+      @include t-u {
+         width: 44px;
+         top: calc(50vh - 22px);
+      }
+      @include mob {
+         top: calc(50vh - 11px);
+         width: 22px;
+      }
+      img{
+         width: 100%;
+      }
+      &[disabled]{
+         cursor: default;
+         opacity: 0.4;
+      }
+   }
+   .coment_moda_btn_next{
+      right: 0;
+      left: auto;
+   }
+}
