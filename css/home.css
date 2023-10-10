@@ -218,19 +218,10 @@
     width: 100%;
   }
 }
-.video_slide iframe {
+.video_slide .player {
+  background: #fff;
   width: 100%;
   height: 100%;
-}
-.video_slide div {
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  border-left: 1px solid #fff;
-  position: absolute;
-  left: calc(100% - 8px);
-  top: calc(100% - 8px);
-  animation: loading_rotate 2s linear infinite;
 }
 
 .disabled_btn_active_video {

@@ -1,19 +1,41 @@
-const players = document.querySelectorAll('.video_slide>iframe');
+const divPlayers = document.querySelectorAll('div.player');
+const allPlayers = document.querySelectorAll('.player');
+const idVideoYT ={
+   player1: "XAlnpQTzyRI",
+   player2: "GBmL2DZj9F8",
+   player3: "WZB2l6kHAnE",
+   player4: "FDerDFnBdbQ"
+} ;
+let players ; 
 
 
 
 let playersAPI = [];
 
-function onYouTubeIframeAPIReady() {
-   players.forEach((el, index) => {
-      playersAPI[index] = new YT.Player(el.id, {
+// function onYouTubeIframeAPIReady() {
+//    players.forEach((el, index) => {
+//       playersAPI[index] = new YT.Player(el.id, {
+//          events: {
+//             'onStateChange': onPlayerStateChange
+//          }
+//       });
+//    });
+// }
+divPlayers.forEach((div, index)=>{
+   div.onclick= function(){
+      let id= div.id;
+      console.log(idVideoYT[id]);
+      
+      playersAPI[index] = new YT.Player(id, {
+         videoid: idVideoYT[id],
          events: {
             'onStateChange': onPlayerStateChange
          }
       });
-   });
-}
 
+      players= document.querySelectorAll('iframe.player');
+   }
+})
 function checkStateVideo(stateVideo, div) {
    if (stateVideo <= 0 || stateVideo == 2 || stateVideo == 5) {
       div.classList.remove("active_video");
