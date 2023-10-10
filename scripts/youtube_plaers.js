@@ -8,8 +8,6 @@ const idVideoYT ={
 } ;
 let players ; 
 
-
-
 let playersAPI = [];
 
 // function onYouTubeIframeAPIReady() {
@@ -27,7 +25,11 @@ divPlayers.forEach((div, index)=>{
       console.log(idVideoYT[id]);
       
       playersAPI[index] = new YT.Player(id, {
-         videoid: idVideoYT[id],
+         videoId: idVideoYT[id],
+         playerVars: { 
+            "autoplay": 1,
+            "rel": 0
+         },
          events: {
             'onStateChange': onPlayerStateChange
          }
