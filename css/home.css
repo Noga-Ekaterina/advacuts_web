@@ -43,7 +43,7 @@
     max-width: 384px;
   }
 }
-#images_slider .prev {
+#images_slider.prev {
   left: -1600px;
 }
 
@@ -180,6 +180,7 @@
 .video_slide {
   aspect-ratio: 320/199;
   position: relative;
+  background: #000;
 }
 @media screen and (min-width: 1920px) {
   .video_slide {
@@ -597,5 +598,10 @@ h1 {
 @media screen and (min-width: 1920px) {
   #coments {
     background: #232222;
+  }
+}
+@media screen and (max-width: 767px) {
+  #coments {
+    background: #322F2F;
   }
 }/*# sourceMappingURL=home.css.map */

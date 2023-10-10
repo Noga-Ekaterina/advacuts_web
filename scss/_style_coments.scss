@@ -33,7 +33,7 @@
    @include t {
       max-width: 384px;
    }
-   .prev{
+   &.prev{
       left: -1600px;
    }
 }
@@ -165,6 +165,7 @@
 .video_slide{
    aspect-ratio: 320/199;
    position: relative;
+   background: #000;
    @include xl {
       max-width: 320px;
       &::before{

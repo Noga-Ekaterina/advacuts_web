@@ -20,7 +20,8 @@ var swiperImg = new Swiper("#images_slider", {
 });
 
 var swiperImg = new Swiper("#video_slider", {
-   //slidesPerView: 1,
+   slidesPerView: 1,
+   spaceBetween: 25,
    navigation: {
       nextEl: ".slider-button-next",
       prevEl: ".slider-button-prev",

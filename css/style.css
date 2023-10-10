@@ -543,6 +543,8 @@ h2 {
 .service > p {
   max-width: 310px;
   font-size: 15px;
+  color: #fff;
+  opacity: 0.5;
 }
 .service:hover::before {
   bottom: 0;

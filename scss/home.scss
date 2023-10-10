@@ -301,4 +301,7 @@ h1 {
    @include xl {
       background: #232222;
    }
+   @include mob {
+      background: #322F2F;
+   }
 }
