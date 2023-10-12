@@ -1,13 +1,5 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
-@keyframes loading_rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 * {
   margin: 0;
   padding: 0;
@@ -453,108 +445,6 @@ h2 {
   left: -100%;
 }
 
-#services {
-  overflow: hidden;
-  position: relative;
-}
-#services .flexSB {
-  flex-wrap: wrap;
-  width: 100%;
-}
-@media screen and (min-width: 1920px) {
-  #services .flexSB {
-    gap: 30px;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1919px) {
-  #services .flexSB {
-    gap: 20px;
-  }
-}
-
-.service {
-  border-radius: 3px;
-  background: #2C2B29;
-  background-image: url(../img/Ellipse_service.png);
-  background-position: right bottom;
-  background-repeat: no-repeat;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2);
-  box-sizing: border-box;
-  padding: 30px 22px;
-  position: relative;
-  cursor: pointer;
-}
-@media screen and (max-width: 1919px) {
-  .service {
-    background-position: calc(100% + 8px) calc(100% + 8px);
-  }
-}
-.service::before {
-  position: absolute;
-  left: 0;
-  top: 0;
-  content: "";
-  background: linear-gradient(120deg, #95803D 2.42%, #564715 107.07%);
-  border-left: 3px solid #FCFFD4;
-  width: 0;
-  height: 0;
-  opacity: 0;
-  border-radius: 0 0 50% 0;
-  transition: width 1s, height 1s, opacity 2s, border-radius 1s;
-  z-index: 1;
-}
-.service * {
-  position: relative;
-  z-index: 9;
-}
-@media screen and (min-width: 1920px) {
-  .service {
-    width: calc((100% - 60px) / 3);
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1919px) {
-  .service {
-    width: calc((100% - 20px) / 2);
-  }
-}
-@media screen and (max-width: 767px) {
-  .service {
-    margin-bottom: 25px;
-    padding: 24px 8px;
-  }
-}
-.service img {
-  float: left;
-}
-.service .line {
-  width: 106px;
-  height: 2px;
-  background: rgba(255, 255, 255, 0.3);
-  clear: both;
-  margin-top: 15px;
-}
-.service .service_h {
-  margin-bottom: 10px;
-}
-.service .service_h p {
-  font-size: 20px;
-  margin-left: 36px;
-}
-.service > p {
-  max-width: 310px;
-  font-size: 15px;
-  color: #fff;
-  opacity: 0.5;
-}
-.service:hover::before {
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 1;
-  border-radius: 0;
-}
-
 .nav_slider {
   display: flex;
   justify-content: center;
@@ -632,40 +522,6 @@ h2 {
   overflow-y: auto;
 }
 
-#service_descr img {
-  height: 454px;
-}
-@media screen and (max-width: 1919px) {
-  #service_descr img {
-    display: none;
-  }
-}
-#service_descr .block_text {
-  margin: 66px;
-}
-@media screen and (min-width: 768px) {
-  #service_descr .block_text {
-    width: 436px;
-  }
-}
-#service_descr h2 {
-  margin-bottom: 45px;
-  text-align: left;
-}
-#service_descr p {
-  margin-bottom: 20px;
-  color: #fff;
-  opacity: 0.4;
-}
-@media screen and (min-width: 1920px) {
-  #service_descr p {
-    font-size: 14px;
-  }
-}
-#service_descr .a_be {
-  margin-top: 35px;
-}
-
 .close {
   position: absolute;
   top: 20px;
@@ -697,4 +553,9 @@ h2 {
   .yes_xl {
     display: none;
   }
+}
+
+.backg {
+  position: absolute;
+  inset: 0;
 }/*# sourceMappingURL=style.css.map */
