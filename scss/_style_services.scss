@@ -113,15 +113,19 @@
 
    img {
       height: 454px;
-      @include mob-and-t {
+      @include mob {
          display: none;
       }
    }
 
    .block_text {
       margin: 66px;
-
-      @include t-u {
+      @include t {
+         width: 336px;
+         margin: 34px;
+         margin-top: 60px;
+      }
+      @include xl {
          width: 436px;
       }
    }
@@ -129,15 +133,16 @@
    h2 {
       margin-bottom: 45px;
       text-align: left;
+      @include t {
+         font-size: 28px;
+      }
    }
 
    p {
       margin-bottom: 20px;
       color: #fff;
       opacity: 0.4;
-      @include xl {
-         font-size: 14px
-      }
+      font-size: 14px;
    }
 
    .a_be {
