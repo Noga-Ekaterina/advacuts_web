@@ -111,7 +111,7 @@
 }
 #service_descr {
 
-   img {
+   >img {
       height: 454px;
       @include mob {
          display: none;

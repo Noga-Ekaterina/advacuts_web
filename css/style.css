@@ -529,18 +529,36 @@ h2 {
   border-radius: 50%;
   background: rgba(0, 0, 0, 0.4);
   color: #FCFFD4;
-  font-size: 16px;
-  padding: 2px;
   aspect-ratio: 1/1;
-  width: 20px;
   text-align: center;
   cursor: pointer;
-  transition: 0.7s;
 }
-.close:hover {
-  background: rgba(0, 0, 0, 0.4);
-  width: 34px;
-  font-size: 25px !important;
+@media screen and (min-width: 1920px) {
+  .close {
+    transition: 0.7s;
+    padding: 4px;
+    width: 9px;
+  }
+  .close:hover {
+    background: rgba(0, 0, 0, 0.4);
+    width: 16px;
+    padding: 8px;
+  }
+}
+@media screen and (max-width: 1919px) {
+  .close {
+    padding: 12px;
+    top: 60px;
+  }
+}
+.close img {
+  width: 100%;
+  display: block;
+}
+@media screen and (max-width: 1919px) {
+  .close img {
+    margin-bottom: -3px;
+  }
 }
 
 @media screen and (min-width: 1920px) {

@@ -556,18 +556,30 @@ h2 {
    border-radius: 50%;
    background: rgba(0, 0, 0, 0.4);
    color: $yellow;
-   font-size: 16px;
-   padding: 2px;
    aspect-ratio: 1/1;
-   width: 20px;
    text-align: center;
    cursor: pointer;
-   transition: 0.7s;
+   @include xl {
+      transition: 0.7s;
+      padding:4px;
+      width: 9px;
 
    &:hover {
       background: rgba(0, 0, 0, 0.4);
-      width: 34px;
-      font-size: 25px !important;
+      width: 16px;
+      padding: 8px;
+   }
+   }
+   @include mob-and-t {
+      padding: 12px;
+      top: 60px;
+   }
+   img{
+      width: 100%;
+      display: block;
+      @include mob-and-t {
+         margin-bottom: -3px;
+      }
    }
 }
 
