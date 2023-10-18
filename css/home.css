@@ -253,9 +253,19 @@
   max-width: 480px;
   width: 100%;
 }
-#coment_modal h2, #coment_modal p {
-  margin: 15px auto;
-  text-align: center;
+@media screen and (min-width: 768px) and (max-width: 1919px) {
+  #coment_modal h2, #coment_modal p {
+    margin: 15px auto;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 767px) {
+  #coment_modal h2, #coment_modal p {
+    margin: 15px 0;
+    margin-left: 16px;
+    max-width: calc(100% - 70px);
+    text-align: left;
+  }
 }
 #coment_modal button {
   position: fixed;
