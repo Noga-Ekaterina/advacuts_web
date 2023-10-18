@@ -193,7 +193,7 @@ h1 {
 
    .img_and_t {
       @include xl {
-         margin-bottom: -22px;
+         margin-bottom: -6px;
          margin-top: 65px;
       }
 
@@ -348,9 +348,14 @@ h1 {
          column-gap: 10px;
       }
       @include mob-and-t {
+         display: flex;
+         justify-content: space-between;
          flex-wrap: wrap;
          row-gap: 17px;
       }
+   }
+   @include mob {
+      background: #252322;
    }
 
    .affair {

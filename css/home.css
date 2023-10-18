@@ -615,7 +615,7 @@ h1 {
 }
 @media screen and (min-width: 1920px) {
   #block2 .img_and_t {
-    margin-bottom: -22px;
+    margin-bottom: -6px;
     margin-top: 65px;
   }
 }
@@ -798,8 +798,15 @@ h1 {
 }
 @media screen and (max-width: 1919px) {
   #our_affairs .flexSB {
+    display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
     row-gap: 17px;
+  }
+}
+@media screen and (max-width: 767px) {
+  #our_affairs {
+    background: #252322;
   }
 }
 #our_affairs .affair {
