@@ -45,13 +45,16 @@ const divAffairs =document.querySelectorAll('.affair');
 const affairsModal =document.querySelector('#affair_descr');
 const affairH= affairsModal.querySelector('h3');
 const descrDispute = document.querySelector('#descr_dispute');
+const btnDescrDispute = document.querySelector('#show_descr_dispute');
 const result = document.querySelector('#result');
 const affairData = document.querySelector('#affair_data');
 divAffairs.forEach((el, index)=>{
    el.onclick= ()=>{
       let thisAffair= affairs[index];
       affairsModal.style.display="flex";
-      el.classList.add("affair_active")
+      descrDispute.classList.add("small_dispute");
+      el.classList.add("affair_active");
+      body.classList.add("open_modal_no_xl")
       divAffairs. forEach((el2, index2)=>{
          if (index!=index2) {
             el2.classList.remove("affair_active")
@@ -60,11 +63,24 @@ divAffairs.forEach((el, index)=>{
 
       affairH.innerHTML= thisAffair[0];
       descrDispute.innerHTML= thisAffair[1];
+      btnDescrDispute.innerHTML= "читать полностью";
       result.innerHTML= thisAffair[2]
       affairData.innerHTML= thisAffair[3]
    }
 })
+btnDescrDispute.onclick=()=>{
+   if (descrDispute.className=="small_dispute"){
+      descrDispute.classList.remove("small_dispute");
+      btnDescrDispute.innerHTML= "скрыть";
+   }
+   else{
+      descrDispute.classList.add("small_dispute");
+      btnDescrDispute.innerHTML= "читать полностью";
+
+   }
+}
 
 document.querySelector('#close_affair').onclick = function () {
-   affairsModal.style.display=""
+   affairsModal.style.display="";
+   body.classList.remove("open_modal_no_xl")
 }

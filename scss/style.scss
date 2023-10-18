@@ -13,6 +13,7 @@
 body{
    overflow: hidden;
 }
+
 .preloader {
    /*фиксированное позиционирование*/
    position: fixed;
@@ -85,7 +86,11 @@ body{
       display: none;
    }
 }
-
+.open_modal_no_xl{
+   @include mob-and-t {
+      overflow: hidden;
+   }
+}
 .width {
    margin: auto;
 

@@ -405,6 +405,7 @@ h1 {
 }
 #affair_content{
    position: relative;
+   max-height: 100vh;
    @include xl {
       width: 808px;
       margin: 50px auto 0;
@@ -423,11 +424,17 @@ h1 {
       grid-template-areas: "h h"
                            "i t";
    }
+   @include mob {
+      max-width: 345px;
+      margin: 0 auto;
+
+   }
    .block_text{
       grid-area: t;
    }
-   #descr_dispute{
-      @include t {
+
+   .small_dispute{
+      @include mob-and-t {
          overflow: hidden;
          text-overflow: ellipsis;
          display: -moz-box;
@@ -438,6 +445,14 @@ h1 {
          -webkit-box-orient: vertical;
          -moz-box-orient: vertical;
       }
+   }
+   #show_descr_dispute{
+      font-size: 14px;
+      text-transform: uppercase;
+      opacity: 0.95;
+      text-decoration-line: underline;
+      margin: 8px 0 0;
+      cursor: pointer;
    }
    h3{
       font-size: 20px;
@@ -450,6 +465,7 @@ h1 {
       }
       @include mob {
          font-size: 16px;
+         max-width: 240px;
       }
    }
    h4{
@@ -460,9 +476,13 @@ h1 {
    p{
       opacity: 0.7;
       font-size: 14px;
+      transition: height 1s;
    }
    .img{
       grid-area: i;
+      @include mob {
+         max-width: 218px;
+      }
       img{
          width: 100%;
          margin-top: 18px;
@@ -471,6 +491,9 @@ h1 {
          font-size: 13px;
          opacity: 0.5;
          margin-top: 13px;
+         @include mob {
+            display: none;
+         }
       }
    }
    .close{

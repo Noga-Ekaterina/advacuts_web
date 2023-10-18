@@ -80,6 +80,12 @@ body {
   display: none;
 }
 
+@media screen and (max-width: 1919px) {
+  .open_modal_no_xl {
+    overflow: hidden;
+  }
+}
+
 .width {
   margin: auto;
 }
