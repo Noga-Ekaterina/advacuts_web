@@ -156,7 +156,7 @@ header {
          column-gap: 40px;
       }
 
-      .contackt {
+      .contacts {
          text-align: right;
       }
 
@@ -196,9 +196,12 @@ header {
       }
    }
 
-   a {
-      text-decoration: none;
-   }
+}
+a {
+   text-decoration: none;
+}
+.flex{
+   display: flex;
 }
 
 #h_icons {
@@ -294,7 +297,7 @@ header {
          margin-bottom: 30px;
       }
 
-      .contackt {
+      .contacts {
          margin-top: 45px;
       }
    }
@@ -346,7 +349,7 @@ header {
    }
 }
 
-.contackt a {
+.contacts a {
    display: block;
 }
 
@@ -587,7 +590,10 @@ h2 {
       }
    }
 }
-
+.icons{
+   display: flex;
+   column-gap: 14px;
+}
 .no_xl {
    @include xl {
       display: none !important;

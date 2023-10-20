@@ -168,7 +168,7 @@ header #flex_header {
     -moz-column-gap: 40px;
          column-gap: 40px;
   }
-  header .contackt {
+  header .contacts {
     text-align: right;
   }
 }
@@ -203,8 +203,13 @@ header .menu {
     font-size: 14px;
   }
 }
-header a {
+
+a {
   text-decoration: none;
+}
+
+.flex {
+  display: flex;
 }
 
 #h_icons {
@@ -294,7 +299,7 @@ header a {
   #header_block_r li {
     margin-bottom: 30px;
   }
-  #header_block_r .contackt {
+  #header_block_r .contacts {
     margin-top: 45px;
   }
 }
@@ -346,7 +351,7 @@ header a {
   }
 }
 
-.contackt a {
+.contacts a {
   display: block;
 }
 
@@ -565,6 +570,12 @@ h2 {
   .close img {
     margin-bottom: -3px;
   }
+}
+
+.icons {
+  display: flex;
+  -moz-column-gap: 14px;
+       column-gap: 14px;
 }
 
 @media screen and (min-width: 1920px) {

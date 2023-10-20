@@ -700,9 +700,6 @@ h1 {
 }
 #block2 .img_and_t .icons {
   margin-top: 14px;
-  display: flex;
-  -moz-column-gap: 14px;
-       column-gap: 14px;
 }
 
 #achievements {
@@ -986,5 +983,135 @@ h1 {
 @media screen and (min-width: 768px) and (max-width: 1919px) {
   #affair_content .close {
     right: -22px;
+  }
+}
+
+#partners {
+  background: linear-gradient(180deg, #222 0%, #1F241D 118.29%);
+}
+@media screen and (max-width: 767px) {
+  #partners {
+    display: none;
+  }
+}
+#partners h2 {
+  color: #fff;
+}
+#partners .flexSB {
+  align-items: center;
+}
+@media screen and (min-width: 1920px) {
+  #partners .flexSB {
+    -moz-column-gap: 35px;
+         column-gap: 35px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1919px) {
+  #partners .flexSB {
+    -moz-column-gap: 70px;
+         column-gap: 70px;
+  }
+}
+#partners .flexSB img {
+  opacity: 0.5;
+}
+
+#contacts {
+  background-image: url(../img/home_img/backg_block5.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media screen and (min-width: 1920px) {
+  #contacts #map_and_contacts {
+    width: 670px;
+  }
+}
+@media screen and (max-width: 1919px) {
+  #contacts #map_and_contacts {
+    width: 100%;
+  }
+}
+#contacts #block_map {
+  overflow: hidden;
+  border-radius: 30px 0;
+}
+@media screen and (min-width: 1920px) {
+  #contacts #block_map {
+    margin-bottom: 18px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1919px) {
+  #contacts #block_map {
+    margin-bottom: 32px;
+  }
+}
+@media screen and (max-width: 767px) {
+  #contacts #block_map {
+    margin-bottom: 24px;
+  }
+}
+#contacts #block_map + .flex {
+  color: #fff;
+}
+@media screen and (min-width: 1920px) {
+  #contacts #block_map + .flex {
+    -moz-column-gap: 47px;
+         column-gap: 47px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1919px) {
+  #contacts #block_map + .flex {
+    -moz-column-gap: 75px;
+         column-gap: 75px;
+  }
+}
+@media screen and (max-width: 767px) {
+  #contacts #block_map + .flex {
+    display: block;
+  }
+}
+#contacts #map {
+  width: 100%;
+  aspect-ratio: 335/144;
+}
+#contacts p {
+  font-size: 18px;
+}
+#contacts #schedule {
+  font-size: 14px;
+  line-height: 126.4%;
+  opacity: 0.7;
+  -moz-column-gap: 25px;
+       column-gap: 25px;
+}
+@media screen and (max-width: 767px) {
+  #contacts #schedule {
+    font-size: 12px;
+    -moz-column-gap: 18px;
+         column-gap: 18px;
+    margin-top: 8px;
+  }
+}
+#contacts #el_contacts {
+  -moz-column-gap: 14px;
+       column-gap: 14px;
+}
+@media screen and (min-width: 1920px) {
+  #contacts #el_contacts {
+    margin-top: 8px;
+  }
+}
+@media screen and (max-width: 1919px) {
+  #contacts #el_contacts {
+    margin-top: 15px;
+  }
+}
+@media screen and (min-width: 768px) {
+  #contacts .icons a {
+    opacity: 0.5;
+    transition: 1s;
+  }
+  #contacts .icons a:hover {
+    opacity: 1;
   }
 }/*# sourceMappingURL=home.css.map */
