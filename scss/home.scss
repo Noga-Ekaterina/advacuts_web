@@ -532,6 +532,9 @@ h1 {
    background-image: url(../img/home_img/backg_block5.png);
    background-size: cover;
    background-repeat: no-repeat;
+   @include mob-and-t {
+      background-position: bottom ;
+   }
    #map_and_contacts{
       @include xl {
          width: 670px;

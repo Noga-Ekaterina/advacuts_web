@@ -599,9 +599,19 @@ h3 {
   inset: 0;
 }
 
+@media screen and (min-width: 768px) {
+  #contacts .width > .flexSB {
+    margin-top: 65px;
+  }
+}
 @media screen and (max-width: 1919px) {
   #contacts .width > .flexSB {
     display: block;
+  }
+}
+@media screen and (max-width: 767px) {
+  #contacts .width > .flexSB {
+    margin-top: 40px;
   }
 }
 

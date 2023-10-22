@@ -614,8 +614,14 @@ h3{
 }
 #contacts{
    .width>.flexSB{
+      @include t-u {
+         margin-top: 65px;
+      }
       @include mob-and-t {
          display: block;
+      }
+      @include mob {
+         margin-top: 40px;
       }
    }
 }
