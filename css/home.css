@@ -928,7 +928,6 @@ h1 {
   cursor: pointer;
 }
 #affair_content h3 {
-  font-size: 20px;
   grid-area: h;
   margin-top: 0;
 }
@@ -1031,25 +1030,6 @@ h1 {
     width: 100%;
   }
 }
-#contacts #block_map {
-  overflow: hidden;
-  border-radius: 30px 0;
-}
-@media screen and (min-width: 1920px) {
-  #contacts #block_map {
-    margin-bottom: 18px;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1919px) {
-  #contacts #block_map {
-    margin-bottom: 32px;
-  }
-}
-@media screen and (max-width: 767px) {
-  #contacts #block_map {
-    margin-bottom: 24px;
-  }
-}
 #contacts #block_map + .flex {
   color: #fff;
 }
@@ -1070,11 +1050,7 @@ h1 {
     display: block;
   }
 }
-#contacts #map {
-  width: 100%;
-  aspect-ratio: 335/144;
-}
-#contacts p {
+#contacts #block_map + .flex p {
   font-size: 18px;
 }
 #contacts #schedule {
