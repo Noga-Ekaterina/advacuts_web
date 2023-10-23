@@ -38,7 +38,7 @@
 .darck {
 
    &,
-   & a {
+   & a:not(footer .menu a, footer .adres a) {
       color: $yellow;
    }
 
@@ -306,6 +306,15 @@ h2 {
 .icons {
    display: flex;
    column-gap: 14px;
+   a{
+      @include t-u {
+         opacity: 0.5;
+         transition: 1s;
+         &:hover{
+            opacity: 1;
+         }
+      }
+   } 
 }
 
 .no_xl {
@@ -365,4 +374,7 @@ h3 {
 #map {
    width: 100%;
    aspect-ratio: 335/144;
+}
+.el_contacts{
+   column-gap: 22px;
 }

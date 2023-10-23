@@ -1169,26 +1169,15 @@ h1 {
     margin-top: 8px;
   }
 }
-#contacts #el_contacts {
-  -moz-column-gap: 14px;
-       column-gap: 14px;
-}
 @media screen and (min-width: 1920px) {
-  #contacts #el_contacts {
+  #contacts .el_contacts {
+    -moz-column-gap: 12px;
+         column-gap: 12px;
     margin-top: 8px;
   }
 }
 @media screen and (max-width: 1919px) {
-  #contacts #el_contacts {
+  #contacts .el_contacts {
     margin-top: 15px;
-  }
-}
-@media screen and (min-width: 768px) {
-  #contacts .icons a {
-    opacity: 0.5;
-    transition: 1s;
-  }
-  #contacts .icons a:hover {
-    opacity: 1;
   }
 }/*# sourceMappingURL=home.css.map */

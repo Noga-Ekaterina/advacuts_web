@@ -44,12 +44,6 @@ header #flex_header {
     margin-top: 19px;
     opacity: 0.5;
   }
-  header #header_block_r {
-    display: flex;
-    align-items: center;
-    -moz-column-gap: 35px;
-         column-gap: 35px;
-  }
 }
 @media screen and (max-width: 767px) {
   header {
@@ -60,11 +54,15 @@ header #flex_header {
   }
 }
 header .menu {
+  justify-content: space-between;
   list-style: none;
 }
-@media screen and (min-width: 768px) and (max-width: 1919px) {
-  header .menu {
-    font-size: 14px;
+@media screen and (min-width: 1920px) {
+  header .menu a {
+    opacity: 0.5;
+  }
+  header .menu a:hover {
+    opacity: 1;
   }
 }
 
@@ -74,6 +72,14 @@ header .menu {
   font-weight: 700;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1919px) {
+  #header_block_r {
+    display: flex;
+    align-items: center;
+    -moz-column-gap: 35px;
+         column-gap: 35px;
+  }
+}
 @media screen and (max-width: 767px) {
   #header_block_r {
     position: fixed;
@@ -122,7 +128,6 @@ header .menu {
 @media screen and (min-width: 768px) {
   .menu {
     display: flex;
-    justify-content: space-between;
     -moz-column-gap: 30px;
          column-gap: 30px;
   }
@@ -137,14 +142,6 @@ header .menu {
 .menu a {
   transition: 0.5s;
   font-size: 14px;
-}
-@media screen and (min-width: 1920px) {
-  .menu a {
-    opacity: 0.5;
-  }
-  .menu a:hover {
-    opacity: 1;
-  }
 }
 
 #open_menu,
@@ -210,6 +207,109 @@ header .menu {
 #h_icons .line.grabien_d {
   background: linear-gradient(0deg, #FFF 50%, rgba(255, 255, 255, 0) 102.59%);
   margin-top: 35px;
+}
+
+footer {
+  background: #120F01;
+}
+@media screen and (min-width: 768px) and (max-width: 1919px) {
+  footer .flexSB {
+    flex-wrap: wrap;
+  }
+}
+footer .menu {
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 1920px) {
+  footer .menu {
+    gap: 32px 134px;
+    width: 552px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1919px) {
+  footer .menu {
+    gap: 22px 26%;
+    width: 58.5%;
+  }
+}
+@media screen and (max-width: 767px) {
+  footer .menu {
+    list-style-position: inside;
+    margin: 60px 0 54px;
+  }
+}
+footer .menu a {
+  color: #F8F8F8;
+}
+@media screen and (min-width: 1920px) {
+  footer .menu a {
+    position: relative;
+    left: -23px;
+    padding-left: 23px;
+  }
+}
+footer .menu li {
+  font-size: 22px;
+}
+@media screen and (min-width: 1920px) {
+  footer .menu li {
+    opacity: 0.5;
+    transition: 1s;
+  }
+  footer .menu li:hover {
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 767px) {
+  footer .menu li:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  footer #footer_block_r {
+    padding-left: 70px;
+    border-left: 1px solid rgba(248, 248, 248, 0.3);
+    height: 50px;
+    margin-top: 20px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1919px) {
+  footer #footer_block_r {
+    width: 100%;
+  }
+}
+footer .adres {
+  position: relative;
+}
+@media screen and (min-width: 1920px) {
+  footer .adres {
+    margin: -20px 0 12px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1919px) {
+  footer .adres {
+    width: 190px;
+    top: -33px;
+  }
+}
+@media screen and (max-width: 767px) {
+  footer .adres {
+    margin-bottom: 18px;
+  }
+}
+footer .adres a {
+  color: #fff;
+  font-size: 14px;
+}
+@media screen and (min-width: 768px) and (max-width: 1919px) {
+  footer .adres a {
+    opacity: 0.6;
+  }
+}
+@media screen and (min-width: 1920px) {
+  footer .icons img {
+    width: 17.6px;
+  }
 }
 
 body {
@@ -316,7 +416,7 @@ body {
   }
 }
 
-.darck, .darck a {
+.darck, .darck a:not(footer .menu a, footer .adres a) {
   color: #FCFFD4;
 }
 .darck .logo span {
@@ -576,6 +676,15 @@ h2 {
   -moz-column-gap: 14px;
        column-gap: 14px;
 }
+@media screen and (min-width: 768px) {
+  .icons a {
+    opacity: 0.5;
+    transition: 1s;
+  }
+  .icons a:hover {
+    opacity: 1;
+  }
+}
 
 @media screen and (min-width: 1920px) {
   .no_xl {
@@ -637,4 +746,9 @@ h3 {
 #map {
   width: 100%;
   aspect-ratio: 335/144;
+}
+
+.el_contacts {
+  -moz-column-gap: 22px;
+       column-gap: 22px;
 }/*# sourceMappingURL=style.css.map */

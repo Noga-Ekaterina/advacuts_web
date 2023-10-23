@@ -572,9 +572,9 @@ h1 {
       }
    }
 
-   #el_contacts{
-      column-gap: 14px;
+   .el_contacts{
       @include xl {
+         column-gap: 12px;
          margin-top: 8px;
       }
       @include mob-and-t {
@@ -582,15 +582,5 @@ h1 {
       }
 
    }
-   .icons{
-      a{
-         @include t-u {
-            opacity: 0.5;
-            transition: 1s;
-            &:hover{
-               opacity: 1;
-            }
-         }
-      }
-   }
+   
 }

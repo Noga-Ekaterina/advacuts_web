@@ -42,11 +42,6 @@ header {
          opacity: 0.5;
       }
 
-      #header_block_r {
-         display: flex;
-         align-items: center;
-         column-gap: 35px;
-      }
    }
 
    @include mob {
@@ -58,10 +53,17 @@ header {
    }
 
    .menu {
+      justify-content: space-between;
       list-style: none;
+      a{
+         @include xl {
 
-      @include t {
-         font-size: 14px;
+            opacity: 0.5;
+   
+            &:hover {
+               opacity: 1;
+            }
+         }
       }
    }
 
@@ -73,6 +75,11 @@ header {
 }
 
 #header_block_r {
+   @include t {
+      display: flex;
+      align-items: center;
+      column-gap: 35px;
+   }
    @include mob {
       position: fixed;
       left: calc(100% + 36px);
@@ -125,7 +132,6 @@ header {
 .menu {
    @include t-u {
       display: flex;
-      justify-content: space-between;
       column-gap: 30px
    }
 
@@ -138,14 +144,7 @@ header {
       transition: 0.5s;
       font-size: 14px;
 
-      @include xl {
-
-         opacity: 0.5;
-
-         &:hover {
-            opacity: 1;
-         }
-      }
+     
    }
 }
 #open_menu,
@@ -213,6 +212,87 @@ header {
       }
    }
 }
-footer{
 
+footer{
+   background: #120F01;
+   .flexSB{
+      @include t {
+         flex-wrap: wrap;
+      }
+   }
+   .menu{
+      flex-wrap: wrap;
+      @include xl {
+         gap: 32px 134px;
+         width: 552px;
+      }
+      @include t {
+         gap: 22px 26%;
+         width: 58.5%;
+      }
+      @include mob {
+         list-style-position: inside;
+         margin: 60px 0 54px;
+      }
+      a{
+         color: #F8F8F8;
+         @include xl {
+            position: relative;
+            left: -23px;
+            padding-left: 23px;
+         }
+      }
+      li{
+         font-size: 22px;
+         @include xl {
+            opacity: 0.5;
+            transition: 1s;
+            &:hover{
+               opacity: 1;
+            }
+         }
+         @include mob {
+            &:not(:last-child){
+               margin-bottom: 32px;
+            }
+         }
+      }
+   }
+   #footer_block_r{
+      @include xl {
+         padding-left: 70px;
+         border-left: 1px solid rgba(248, 248, 248, 0.3);
+         height: 50px;
+         margin-top: 20px;
+      }
+      @include t {
+         width: 100%;
+      }
+   }
+   .adres{
+      position: relative;
+
+      @include xl {
+         margin: -20px 0 12px;
+      }
+      @include t {
+         width: 190px;
+         top: -33px;
+      }
+      @include mob {
+         margin-bottom: 18px;
+      }
+      a{
+         color: #fff;
+         font-size: 14px;
+         @include t {
+            opacity: 0.6;
+         }
+      }
+   }
+   .icons img{
+      @include xl {
+         width: 17.6px;
+      }
+   }
 }
