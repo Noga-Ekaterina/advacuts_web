@@ -517,8 +517,8 @@ a {
 
 .border_gradient {
   border-bottom: 2px solid transparent;
-  -o-border-image: linear-gradient(90deg, #FCFFD4 0%, #383921 101.45%);
-     border-image: linear-gradient(90deg, #FCFFD4 0%, #383921 101.45%);
+  -o-border-image: linear-gradient(90deg, #FCFFD4 0%, rgba(0, 0, 0, 0) 101.45%);
+     border-image: linear-gradient(90deg, #FCFFD4 0%, rgba(0, 0, 0, 0) 101.45%);
   border-image-slice: 1;
   padding-bottom: 8px;
   display: block;
@@ -624,7 +624,7 @@ h2 {
 }
 #shadow_block > div {
   position: relative;
-  border-radius: 35px 0 0 0;
+  border-radius: 35px 0;
   background: linear-gradient(214deg, #2D2B23 9.6%, #292923 108.65%);
   box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.33);
   display: none;

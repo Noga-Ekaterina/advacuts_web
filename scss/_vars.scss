@@ -18,4 +18,16 @@ $max-w-xl: 1920px - 375px * 2;
    }
 };
 
-$white06: rgba(255, 255, 255, 0.06)
+$white06: rgba(255, 255, 255, 0.06);
+
+@mixin small-text($line){
+   overflow: hidden;
+   text-overflow: ellipsis;
+   display: -moz-box;
+   display: box;
+   display: -webkit-box;
+   -webkit-line-clamp: $line;
+   line-clamp: $line;
+   -webkit-box-orient: vertical;
+   -moz-box-orient: vertical;
+}

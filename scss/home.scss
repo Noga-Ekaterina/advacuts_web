@@ -169,6 +169,48 @@ h1 {
    }
 }
 
+.service{
+   background: #2C2B29;
+   background-image: url(../img/Ellipse_service.png);
+   background-position: right bottom;
+   background-repeat: no-repeat;
+   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.20);
+
+   @include xl {
+      width: calc((100% - 60px) / 3);
+   }
+
+   @include t {
+      width: calc((100% - 20px) / 2);
+
+   }
+   @include mob-and-t {
+      background-position: calc(100% + 8px) calc(100% + 8px);
+   }
+   &::before{
+      border-left: 3px solid $yellow;
+   }
+   img {
+      float: left;
+   }
+
+   .line {
+      width: 106px;
+      height: 2px;
+      background: rgba(255, 255, 255, 0.30);
+      clear: both;
+      margin-top: 15px;
+   }
+   
+   .service_h {
+      margin-bottom: 10px;
+
+      p {
+         font-size: 20px;
+         margin-left: 36px;
+      }
+   }
+}
 #services+a {
    width: fit-content;
    margin: auto;
@@ -440,15 +482,7 @@ h1 {
 
    .small_dispute{
       @include mob-and-t {
-         overflow: hidden;
-         text-overflow: ellipsis;
-         display: -moz-box;
-         display: box;
-         display: -webkit-box;
-         -webkit-line-clamp: 3;
-         line-clamp: 3;
-         -webkit-box-orient: vertical;
-         -moz-box-orient: vertical;
+         @include small-text(3)
       }
    }
    #show_descr_dispute{

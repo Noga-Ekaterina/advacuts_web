@@ -1,0 +1,45 @@
+@import "_medias.scss";
+@import "_vars.scss";
+@import "_style_services.scss";
+
+#main_div{
+   background-image: url(../img/service_backg.png);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-attachment: fixed;
+}
+header #flex_header{
+   margin-bottom: 50px;
+}
+main> div{
+   padding-top: 0;
+}
+#services{
+   padding: 18px 0;
+}
+.service{
+   border-radius: 35px 3px;
+   background: linear-gradient(214deg, #302E24 9.6%, #2F2E24 108.65%);
+   box-shadow: 0px 4px 13px 0px rgba(0, 0, 0, 0.28);
+   padding: 37px 0 37px 34px ;
+   @include xl {
+      width: 262px;
+   }
+   @include t {
+      width: calc((100% - 70px) / 3);
+   }
+   p{
+      @include small-text(4);
+      padding-right: 45px;
+   }
+   .service_num{
+      width: calc(100% - 54px);
+      font-size: 20px;
+      color: rgba(252, 255, 212, 0.2);
+   }
+   .service_h{
+      color: #F2F2F2;
+      margin: 13px 0 19px;
+      padding-right: 8px;
+   }
+}

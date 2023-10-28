@@ -320,20 +320,11 @@
 
 .service {
   border-radius: 3px;
-  background: #2C2B29;
-  background-image: url(../img/Ellipse_service.png);
-  background-position: right bottom;
-  background-repeat: no-repeat;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
   box-sizing: border-box;
   padding: 30px 22px;
   position: relative;
   cursor: pointer;
-}
-@media screen and (max-width: 1919px) {
-  .service {
-    background-position: calc(100% + 8px) calc(100% + 8px);
-  }
 }
 .service::before {
   position: absolute;
@@ -341,7 +332,6 @@
   top: 0;
   content: "";
   background: linear-gradient(120deg, #95803D 2.42%, #564715 107.07%);
-  border-left: 3px solid #FCFFD4;
   width: 0;
   height: 0;
   opacity: 0;
@@ -353,38 +343,11 @@
   position: relative;
   z-index: 9;
 }
-@media screen and (min-width: 1920px) {
-  .service {
-    width: calc((100% - 60px) / 3);
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1919px) {
-  .service {
-    width: calc((100% - 20px) / 2);
-  }
-}
 @media screen and (max-width: 767px) {
   .service {
     margin-bottom: 25px;
     padding: 24px 8px;
   }
-}
-.service img {
-  float: left;
-}
-.service .line {
-  width: 106px;
-  height: 2px;
-  background: rgba(255, 255, 255, 0.3);
-  clear: both;
-  margin-top: 15px;
-}
-.service .service_h {
-  margin-bottom: 10px;
-}
-.service .service_h p {
-  font-size: 20px;
-  margin-left: 36px;
 }
 .service > p {
   max-width: 310px;
@@ -398,9 +361,12 @@
   width: 100%;
   height: 100%;
   opacity: 1;
-  border-radius: 0;
+  border-radius: inherit;
 }
 
+#service_descr {
+  align-items: flex-end;
+}
 #service_descr > img {
   height: 454px;
 }
@@ -416,7 +382,11 @@
   #service_descr .block_text {
     width: 336px;
     margin: 34px;
-    margin-top: 60px;
+  }
+}
+@media screen and (min-width: 768px) {
+  #service_descr .block_text {
+    margin-top: 25px;
   }
 }
 @media screen and (min-width: 1920px) {
@@ -430,7 +400,7 @@
 }
 @media screen and (min-width: 768px) and (max-width: 1919px) {
   #service_descr h2 {
-    font-size: 26px;
+    font-size: 25px;
   }
 }
 #service_descr p {
@@ -441,6 +411,9 @@
 }
 #service_descr .a_be {
   margin-top: 35px;
+}
+#service_descr .a_be a {
+  margin-bottom: 0;
 }
 
 #block_form, #post_form {
@@ -693,6 +666,49 @@ h1 {
 #block1 .width {
   position: relative;
   z-index: 4;
+}
+
+.service {
+  background: #2C2B29;
+  background-image: url(../img/Ellipse_service.png);
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2);
+}
+@media screen and (min-width: 1920px) {
+  .service {
+    width: calc((100% - 60px) / 3);
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1919px) {
+  .service {
+    width: calc((100% - 20px) / 2);
+  }
+}
+@media screen and (max-width: 1919px) {
+  .service {
+    background-position: calc(100% + 8px) calc(100% + 8px);
+  }
+}
+.service::before {
+  border-left: 3px solid #FCFFD4;
+}
+.service img {
+  float: left;
+}
+.service .line {
+  width: 106px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.3);
+  clear: both;
+  margin-top: 15px;
+}
+.service .service_h {
+  margin-bottom: 10px;
+}
+.service .service_h p {
+  font-size: 20px;
+  margin-left: 36px;
 }
 
 #services + a {
