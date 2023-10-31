@@ -587,7 +587,7 @@ h2 {
   font-size: 14px;
   background: none;
   border: 0;
-  color: #FCFFD4;
+  color: #fff;
   transition: 1s;
 }
 .nav_slider button:not([disabled]) {
@@ -595,7 +595,7 @@ h2 {
   cursor: pointer;
 }
 .nav_slider button[disabled]:not(.disabled_btn_active_video), .nav_slider button:hover:not(.disabled_btn_active_video) {
-  color: #fff;
+  color: #FCFFD4;
   opacity: 1;
 }
 .nav_slider button[disabled]:not(.disabled_btn_active_video) + .nav_line div {

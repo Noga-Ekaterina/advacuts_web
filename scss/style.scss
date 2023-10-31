@@ -185,7 +185,7 @@ h2 {
       font-size: 14px;
       background: none;
       border: 0;
-      color: $yellow;
+      color: #fff;
       transition: 1s;
 
       &:not([disabled]) {
@@ -196,7 +196,7 @@ h2 {
       &[disabled],
       &:hover {
          &:not(.disabled_btn_active_video) {
-            color: #fff;
+            color: $yellow;
             opacity: 1;
          }
       }
