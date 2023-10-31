@@ -22,18 +22,6 @@ header {
       min-width: 100%;
       max-height: 1000px;
       box-sizing: border-box;
-
-      .yes_small {
-         display: block;
-         max-width: 292px;
-         margin-top: 66px;
-         padding: 19px 17px;
-         color: #fff;
-         text-align: center;
-         border-radius: 3px;
-         border: 1px solid #FFF;
-         box-shadow: 0px 0px 26px 0px rgba(149, 127, 61, 0.68);
-      }
    }
 
    .img_and_t {
@@ -144,10 +132,6 @@ header {
          opacity: 0.5;
       }
    }
-}
-
-h1 {
-   font-size: 50px;
 }
 
 #block1 {
@@ -337,7 +321,7 @@ h1 {
    padding: 0;
 
    @include t {
-      background-image: url(../img/home_img/backg_block3.png);
+      background-image: url(../img/backg_affairs.png);
       background-position: center top;
       background-size: cover;
    }
@@ -363,7 +347,7 @@ h1 {
 
    @include xl {
       position: relative;
-      background-image: url(../img/home_img/backg_block3.png);
+      background-image: url(../img/backg_affairs.png);
       background-position: center;
       background-size: cover;
       padding-top: 8px;
