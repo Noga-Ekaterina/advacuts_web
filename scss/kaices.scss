@@ -1,0 +1,68 @@
+@import "_medias.scss";
+@import "_vars.scss";
+
+header{
+   background-image: url(../img/kaices_img/backg_header.png);
+   background-size: cover;
+   background-repeat: no-repeat;
+   @include t {
+      height: 575px;
+   }
+   @include mob {
+      aspect-ratio: 1/2.59;
+      min-height: 955px;
+      max-width: 100%;
+      min-width: 100%;
+      max-height: 1000px;
+      box-sizing: border-box;
+   }
+
+   .block_text{
+      @include t {
+         width: 495px;
+      }
+   }
+   .img_and_t{
+      margin-bottom: -5px;
+      @include xl {
+         margin-top: -60px;
+         position: relative;
+         left: -75px
+      }
+      @include t {
+         width: 400px;
+         position: absolute;
+         right: 0;
+         bottom: 0;
+      }
+      @include mob {
+         position: absolute;
+         right: 0;
+         bottom: 0;
+         width: 96%;
+         max-width: 490px;
+      }
+
+      img{
+         @include mob-and-t {
+            width: 100%;
+         }
+      }
+   }
+   #h_icons{
+      @include xl {
+         margin-top: -78px;
+      }
+      a{
+         @include xl {
+            margin: 7px 0;
+         }
+      }
+   }
+}
+#block1{
+   background-image: url(../img/backg_affairs.png);
+   background-position: center;
+   background-size: cover;
+
+}

@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 header {
   position: relative;
+  overflow: hidden;
 }
 header #flex_header {
   display: flex;
@@ -51,6 +52,17 @@ header #flex_header {
   }
   header #h_adres {
     display: none;
+  }
+  header .yes_small {
+    display: block;
+    max-width: 292px;
+    margin-top: 66px;
+    padding: 19px 17px;
+    color: #fff;
+    text-align: center;
+    border-radius: 3px;
+    border: 1px solid #FFF;
+    box-shadow: 0px 0px 26px 0px rgba(149, 127, 61, 0.68);
   }
 }
 header .menu {
@@ -248,6 +260,10 @@ footer .menu a {
     padding-left: 23px;
   }
 }
+footer .menu span {
+  font-size: 15px;
+  color: #F8F8F8;
+}
 footer .menu li {
   font-size: 22px;
 }
@@ -256,7 +272,7 @@ footer .menu li {
     opacity: 0.5;
     transition: 1s;
   }
-  footer .menu li:hover {
+  footer .menu li:hover, footer .menu li.active_a {
     opacity: 1;
   }
 }
@@ -445,6 +461,10 @@ footer {
   footer {
     padding: 55px 4.255vw;
   }
+}
+
+h1 {
+  font-size: 50px;
 }
 
 a {

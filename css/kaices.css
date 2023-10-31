@@ -1,0 +1,73 @@
+header {
+  background-image: url(../img/kaices_img/backg_header.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media screen and (min-width: 768px) and (max-width: 1919px) {
+  header {
+    height: 575px;
+  }
+}
+@media screen and (max-width: 767px) {
+  header {
+    aspect-ratio: 1/2.59;
+    min-height: 955px;
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 1000px;
+    box-sizing: border-box;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1919px) {
+  header .block_text {
+    width: 495px;
+  }
+}
+header .img_and_t {
+  margin-bottom: -5px;
+}
+@media screen and (min-width: 1920px) {
+  header .img_and_t {
+    margin-top: -60px;
+    position: relative;
+    left: -75px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1919px) {
+  header .img_and_t {
+    width: 400px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  header .img_and_t {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 96%;
+    max-width: 490px;
+  }
+}
+@media screen and (max-width: 1919px) {
+  header .img_and_t img {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1920px) {
+  header #h_icons {
+    margin-top: -78px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  header #h_icons a {
+    margin: 7px 0;
+  }
+}
+
+#block1 {
+  background-image: url(../img/backg_affairs.png);
+  background-position: center;
+  background-size: cover;
+}/*# sourceMappingURL=kaices.css.map */
