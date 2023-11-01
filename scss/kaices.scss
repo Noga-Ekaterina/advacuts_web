@@ -65,4 +65,91 @@ header{
    background-position: center;
    background-size: cover;
 
+   .nav_slider{
+      margin-top: -10px;
+      z-index: 9999999;
+      position: relative;
+      @include t-u {
+         width: fit-content;
+         justify-content: flex-start;
+      }
+   }
+   .width{
+      @include t {
+         width: 622px;
+      }
+   }
+}
+#kaices_slider{
+   position: relative;
+   overflow: hidden;
+   @include mob {
+      max-width: 290px;
+      margin: 0 auto;
+   }
+   .slide{
+      width: 100%;
+   }
+   .swiper-wrapper{
+      padding: 15px 0 68px;
+   }
+}
+.kaice{
+   border-radius: 35px 3px;
+   background: linear-gradient(51deg, #282523 -1.4%, #2F2C29 102.27%);
+   box-shadow: 0px 4px 13px 0px rgba(0, 0, 0, 0.28);
+   color: #F2F2F2;
+   width: 270px;
+   box-sizing: border-box;
+   padding: 49px 29px 49px 39px;
+   cursor: pointer;
+   
+   p{
+      opacity: 0.4;
+      margin-top: 5px;
+   }
+   div{
+      margin-top: 16px;
+   }
+
+   & &_h{
+      position: relative;
+      width: 190px;
+      margin-top: 0;
+      margin-bottom: 12px;
+      &::before{
+         content: url(../img/kaices_img/award.png);
+         position: absolute;
+         right: -25px;
+         top: 4px;
+      }
+   }
+   .affair_n{
+      font-size: 10px;
+   }
+}
+.buttons_slider{
+   display: flex;
+   column-gap: 22px;
+   z-index: 9999999;
+   @include t-u {
+      position: absolute;
+      bottom: -10px;
+      right: 0;
+   }
+   @include mob {
+      margin: -50px 0 25px;
+      justify-content: center;
+      position: relative;
+   }
+   div{
+      opacity: 0.3;
+      transition: 1s;
+      &:not(.swiper-button-disabled){
+         cursor: pointer;
+         &:hover{
+            opacity: 1;
+         }
+      }
+   }
 }

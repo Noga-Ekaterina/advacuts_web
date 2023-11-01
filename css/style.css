@@ -563,6 +563,7 @@ h2 {
 .slide {
   position: absolute;
   transition: 1s;
+  top: 0;
 }
 .slide.active {
   position: relative;

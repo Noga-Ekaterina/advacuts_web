@@ -70,4 +70,102 @@ header .img_and_t {
   background-image: url(../img/backg_affairs.png);
   background-position: center;
   background-size: cover;
+}
+#block1 .nav_slider {
+  margin-top: -10px;
+  z-index: 9999999;
+  position: relative;
+}
+@media screen and (min-width: 768px) {
+  #block1 .nav_slider {
+    width: -moz-fit-content;
+    width: fit-content;
+    justify-content: flex-start;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1919px) {
+  #block1 .width {
+    width: 622px;
+  }
+}
+
+#kaices_slider {
+  position: relative;
+  overflow: hidden;
+}
+@media screen and (max-width: 767px) {
+  #kaices_slider {
+    max-width: 290px;
+    margin: 0 auto;
+  }
+}
+#kaices_slider .slide {
+  width: 100%;
+}
+#kaices_slider .swiper-wrapper {
+  padding: 15px 0 68px;
+}
+
+.kaice {
+  border-radius: 35px 3px;
+  background: linear-gradient(51deg, #282523 -1.4%, #2F2C29 102.27%);
+  box-shadow: 0px 4px 13px 0px rgba(0, 0, 0, 0.28);
+  color: #F2F2F2;
+  width: 270px;
+  box-sizing: border-box;
+  padding: 49px 29px 49px 39px;
+  cursor: pointer;
+}
+.kaice p {
+  opacity: 0.4;
+  margin-top: 5px;
+}
+.kaice div {
+  margin-top: 16px;
+}
+.kaice .kaice_h {
+  position: relative;
+  width: 190px;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+.kaice .kaice_h::before {
+  content: url(../img/kaices_img/award.png);
+  position: absolute;
+  right: -25px;
+  top: 4px;
+}
+.kaice .affair_n {
+  font-size: 10px;
+}
+
+.buttons_slider {
+  display: flex;
+  -moz-column-gap: 22px;
+       column-gap: 22px;
+  z-index: 9999999;
+}
+@media screen and (min-width: 768px) {
+  .buttons_slider {
+    position: absolute;
+    bottom: -10px;
+    right: 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .buttons_slider {
+    margin: -50px 0 25px;
+    justify-content: center;
+    position: relative;
+  }
+}
+.buttons_slider div {
+  opacity: 0.3;
+  transition: 1s;
+}
+.buttons_slider div:not(.swiper-button-disabled) {
+  cursor: pointer;
+}
+.buttons_slider div:not(.swiper-button-disabled):hover {
+  opacity: 1;
 }/*# sourceMappingURL=kaices.css.map */
