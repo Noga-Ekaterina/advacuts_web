@@ -73,7 +73,7 @@ header .img_and_t {
 }
 #block1 .nav_slider {
   margin-top: -10px;
-  z-index: 9999999;
+  z-index: 999;
   position: relative;
 }
 @media screen and (min-width: 768px) {
@@ -168,4 +168,52 @@ header .img_and_t {
 }
 .buttons_slider div:not(.swiper-button-disabled):hover {
   opacity: 1;
+}
+
+#shadow_block {
+  background: rgba(39, 37, 37, 0.95);
+}
+
+#kaice_descr {
+  background: rgba(48, 44, 44, 0.9) !important;
+}
+@media screen and (max-width: 767px) {
+  #kaice_descr > img {
+    display: none;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #kaice_descr .block_text {
+    margin: 69px;
+    width: 400px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1919px) {
+  #kaice_descr .block_text {
+    margin: 47px 35px;
+    width: 321px;
+  }
+}
+@media screen and (max-width: 767px) {
+  #kaice_descr .block_text {
+    margin: 40px;
+  }
+}
+#kaice_descr .block_text *:not(#customer) {
+  color: #F2F2F2;
+  font-size: 18px;
+}
+#kaice_descr .block_text div:not(#customer) {
+  margin: 27px 0 7px;
+}
+#kaice_descr p {
+  opacity: 0.5;
+}
+#kaice_descr #customer {
+  font-size: 20px;
+  margin: 0 0 11px;
+}
+#kaice_descr #affair_n_descr {
+  font-size: 14px;
+  opacity: 0.4;
 }/*# sourceMappingURL=kaices.css.map */
