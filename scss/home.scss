@@ -2,6 +2,7 @@
 @import "_vars.scss";
 @import "_style_coments.scss";
 @import "_style_services.scss";
+@import "_style_block_contacts.scss";
 @import "_syle_form.scss";
 
 header {
@@ -554,51 +555,4 @@ header {
    @include mob-and-t {
       background-position: bottom ;
    }
-   #map_and_contacts{
-      @include xl {
-         width: 670px;
-      }
-      @include mob-and-t {
-         width: 100%;
-      }
-   }
-   #block_map+.flex{
-         color: #fff;
-         @include xl {
-            column-gap: 47px;
-         }
-         @include t {
-            column-gap: 75px;
-         }
-         @include mob {
-            display: block;
-         }
-         p{
-            font-size: 18px;
-         }
-      }
-      
-   #schedule{
-      font-size: 14px;
-      line-height: 126.4%;
-      opacity: 0.7;
-      column-gap: 25px;
-      @include mob {
-         font-size: 12px;
-         column-gap: 18px;
-         margin-top: 8px;
-      }
-   }
-
-   .el_contacts{
-      @include xl {
-         column-gap: 12px;
-         margin-top: 8px;
-      }
-      @include mob-and-t {
-         margin-top: 15px;
-      }
-
-   }
-   
 }

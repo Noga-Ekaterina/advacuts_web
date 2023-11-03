@@ -416,6 +416,107 @@
   margin-bottom: 0;
 }
 
+@media screen and (min-width: 768px) {
+  #contacts .width > .flexSB {
+    margin-top: 65px;
+  }
+}
+@media screen and (max-width: 1919px) {
+  #contacts .width > .flexSB {
+    display: block;
+  }
+}
+@media screen and (max-width: 767px) {
+  #contacts .width > .flexSB {
+    margin-top: 40px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #contacts #map_and_contacts {
+    width: 670px;
+  }
+}
+@media screen and (max-width: 1919px) {
+  #contacts #map_and_contacts {
+    width: 100%;
+  }
+}
+#contacts #block_map + .flex {
+  color: #fff;
+}
+@media screen and (min-width: 1920px) {
+  #contacts #block_map + .flex {
+    -moz-column-gap: 47px;
+         column-gap: 47px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1919px) {
+  #contacts #block_map + .flex {
+    -moz-column-gap: 75px;
+         column-gap: 75px;
+  }
+}
+@media screen and (max-width: 767px) {
+  #contacts #block_map + .flex {
+    display: block;
+  }
+}
+#contacts #block_map + .flex p {
+  font-size: 18px;
+}
+#contacts #schedule {
+  font-size: 14px;
+  line-height: 126.4%;
+  opacity: 0.7;
+  -moz-column-gap: 25px;
+       column-gap: 25px;
+}
+@media screen and (max-width: 767px) {
+  #contacts #schedule {
+    font-size: 12px;
+    -moz-column-gap: 18px;
+         column-gap: 18px;
+    margin-top: 8px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #contacts .el_contacts {
+    -moz-column-gap: 12px;
+         column-gap: 12px;
+    margin-top: 8px;
+  }
+}
+@media screen and (max-width: 1919px) {
+  #contacts .el_contacts {
+    margin-top: 15px;
+  }
+}
+
+#block_map {
+  overflow: hidden;
+  border-radius: 30px 0;
+}
+@media screen and (min-width: 1920px) {
+  #block_map {
+    margin-bottom: 18px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1919px) {
+  #block_map {
+    margin-bottom: 32px;
+  }
+}
+@media screen and (max-width: 767px) {
+  #block_map {
+    margin-bottom: 24px;
+  }
+}
+
+#map {
+  width: 100%;
+  aspect-ratio: 335/144;
+}
+
 #block_form, #post_form {
   max-width: 328px;
   border: 1px solid;
@@ -1120,65 +1221,5 @@ header .img_and_t .text {
 @media screen and (max-width: 1919px) {
   #contacts {
     background-position: bottom;
-  }
-}
-@media screen and (min-width: 1920px) {
-  #contacts #map_and_contacts {
-    width: 670px;
-  }
-}
-@media screen and (max-width: 1919px) {
-  #contacts #map_and_contacts {
-    width: 100%;
-  }
-}
-#contacts #block_map + .flex {
-  color: #fff;
-}
-@media screen and (min-width: 1920px) {
-  #contacts #block_map + .flex {
-    -moz-column-gap: 47px;
-         column-gap: 47px;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1919px) {
-  #contacts #block_map + .flex {
-    -moz-column-gap: 75px;
-         column-gap: 75px;
-  }
-}
-@media screen and (max-width: 767px) {
-  #contacts #block_map + .flex {
-    display: block;
-  }
-}
-#contacts #block_map + .flex p {
-  font-size: 18px;
-}
-#contacts #schedule {
-  font-size: 14px;
-  line-height: 126.4%;
-  opacity: 0.7;
-  -moz-column-gap: 25px;
-       column-gap: 25px;
-}
-@media screen and (max-width: 767px) {
-  #contacts #schedule {
-    font-size: 12px;
-    -moz-column-gap: 18px;
-         column-gap: 18px;
-    margin-top: 8px;
-  }
-}
-@media screen and (min-width: 1920px) {
-  #contacts .el_contacts {
-    -moz-column-gap: 12px;
-         column-gap: 12px;
-    margin-top: 8px;
-  }
-}
-@media screen and (max-width: 1919px) {
-  #contacts .el_contacts {
-    margin-top: 15px;
   }
 }/*# sourceMappingURL=home.css.map */
