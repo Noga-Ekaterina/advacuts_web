@@ -67,7 +67,7 @@ header{
 
    .nav_slider{
       margin-top: -10px;
-      z-index: 9999999;
+      z-index: 999;
       position: relative;
       @include t-u {
          width: fit-content;
@@ -151,5 +151,48 @@ header{
             opacity: 1;
          }
       }
+   }
+}
+
+#shadow_block{
+   background: rgba(39, 37, 37, 0.95);
+}
+#kaice_descr{
+   background: rgba(48, 44, 44, 0.9) !important;
+   >img{
+      @include mob {
+         display: none;
+      }
+   }
+   .block_text{
+      @include xl {
+         margin: 69px;
+         width: 400px;
+      }
+      @include t {
+         margin: 47px 35px;
+         width: 321px;
+      }
+      @include mob {
+         margin: 40px;
+      }
+      *:not(#customer){
+         color: #F2F2F2;
+         font-size: 18px;
+      }
+      div:not(#customer){
+         margin: 27px 0 7px;
+      }
+   }
+   p{
+      opacity: 0.5;
+   }
+   #customer{
+      font-size: 20px;
+      margin: 0 0 11px;
+   }
+   #affair_n_descr{
+      font-size: 14px;
+      opacity: 0.4;
    }
 }
