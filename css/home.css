@@ -519,27 +519,31 @@
 
 #block_form, #post_form {
   max-width: 328px;
+  box-sizing: border-box;
   border: 1px solid;
   border-radius: 30px 0;
 }
 .darck #block_form, .darck #post_form {
   color: #fff;
-  border-color: #fff;
+  border-color: rgba(255, 255, 255, 0.4);
 }
 @media screen and (min-width: 1920px) {
   #block_form, #post_form {
     padding: 68px 31px;
+    height: 408px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1919px) {
   #block_form, #post_form {
     padding: 59px 44px;
+    height: 388px;
     margin: 78px auto 0;
   }
 }
 @media screen and (max-width: 767px) {
   #block_form, #post_form {
     padding: 48px 44px;
+    height: 368px;
     margin: 35px auto 0;
   }
 }
@@ -602,6 +606,7 @@
 }
 #block_form p, #post_form p {
   font-size: 9px;
+  opacity: 0.6;
 }
 
 #post_form {
@@ -611,6 +616,7 @@
 }
 #post_form p {
   font-size: 20px;
+  opacity: 1;
 }
 
 header {

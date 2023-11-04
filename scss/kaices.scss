@@ -1,5 +1,7 @@
 @import "_medias.scss";
 @import "_vars.scss";
+@import "_style_block_contacts.scss";
+@import "_syle_form.scss";
 
 header{
    background-image: url(../img/kaices_img/backg_header.png);
@@ -194,5 +196,34 @@ header{
    #affair_n_descr{
       font-size: 14px;
       opacity: 0.4;
+   }
+}
+#contacts{
+   background: linear-gradient(247deg, #1F1B1B 16.35%, #282220 113.78%);
+   .width{
+      position: relative;
+      >img{
+         position: absolute;
+         bottom: -140px;
+         right: -375px;
+      }
+   }
+   #block_map + .flex{
+      @include xl {
+         display: block;
+         #schedule{
+            margin: 8px 0 24px;
+            display: block;
+            div{
+               margin: 2px 0;
+            }
+         }
+      }
+   }
+   #block_form{
+      @include xl {
+         position: relative;
+         left: -80px;
+      }
    }
 }
