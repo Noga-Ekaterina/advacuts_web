@@ -3,3 +3,34 @@
 @import "_style_block_contacts.scss";
 @import "_syle_form.scss";
 
+header{
+   background-image: url(../img/contacts_img/backg_header.png);
+   background-repeat: no-repeat;
+   background-size: cover;
+
+   #h_icons{
+      @include xl {
+         margin-top: -70px;
+
+         a{
+            margin: 4px 0;
+         }
+      }
+   }
+   .img_and_t{
+      margin-bottom: -4px;
+      @include xl {
+         margin-top: -60px;
+      }
+      @include mob-and-t {
+         max-width: 342px;
+
+         img{
+            width: 100%;
+         }
+      }
+      @include mob {
+         margin: 26px auto -4px;
+      }
+   }
+}
