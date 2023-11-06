@@ -1,15 +1,24 @@
 #contacts {
-   .width>.flexSB {
-      @include t-u {
-         margin-top: 65px;
+   .width{
+      position: relative;
+      
+      >img{
+         position: absolute;
+         bottom: -140px;
+         right: -375px;
       }
-
-      @include mob-and-t {
-         display: block;
-      }
-
-      @include mob {
-         margin-top: 40px;
+      >.flexSB {
+         @include t-u {
+            margin-top: 65px;
+         }
+   
+         @include mob-and-t {
+            display: block;
+         }
+   
+         @include mob {
+            margin-top: 40px;
+         }
       }
    }
    #map_and_contacts{

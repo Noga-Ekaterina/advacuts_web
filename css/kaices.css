@@ -1,3 +1,11 @@
+#contacts .width {
+  position: relative;
+}
+#contacts .width > img {
+  position: absolute;
+  bottom: -140px;
+  right: -375px;
+}
 @media screen and (min-width: 768px) {
   #contacts .width > .flexSB {
     margin-top: 65px;
@@ -423,14 +431,6 @@ header .img_and_t {
 
 #contacts {
   background: linear-gradient(247deg, #1F1B1B 16.35%, #282220 113.78%);
-}
-#contacts .width {
-  position: relative;
-}
-#contacts .width > img {
-  position: absolute;
-  bottom: -140px;
-  right: -375px;
 }
 @media screen and (min-width: 1920px) {
   #contacts #block_map + .flex {
