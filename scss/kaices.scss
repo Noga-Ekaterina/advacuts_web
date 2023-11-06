@@ -200,14 +200,7 @@ header{
 }
 #contacts{
    background: linear-gradient(247deg, #1F1B1B 16.35%, #282220 113.78%);
-   .width{
-      position: relative;
-      >img{
-         position: absolute;
-         bottom: -140px;
-         right: -375px;
-      }
-   }
+   
    #block_map + .flex{
       @include xl {
          display: block;
