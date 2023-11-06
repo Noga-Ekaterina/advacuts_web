@@ -34,3 +34,11 @@ header{
       }
    }
 }
+#contacts{
+   background: linear-gradient(247deg, #1F1B1B 16.35%, #282220 113.78%);
+   #block_form{
+      @include xl {
+         margin-right: 25px;
+      }
+   }
+}
