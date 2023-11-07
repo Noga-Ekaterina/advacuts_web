@@ -7,6 +7,9 @@
       color: #fff;
       border-color: #FFFFFF66;
    }
+   .light &{
+      color: $yellow-darck;
+   }
    @include xl {
       padding: 68px 31px;
       height: calc(272px + 136px);
@@ -36,11 +39,18 @@
          color: #fff;
          border-color: #fff;
       }
+      .light &{
+         color: #333;
+         border-color: #333;
+      }
       &::placeholder{
          opacity: 0.5;
          font-size: 14px;
          .darck &{
             color: #E0E0E0;
+         }
+         .light &{
+            color: #4f4f4f;
          }
       }
    }
@@ -53,6 +63,10 @@
       .darck &{
          color: $yellow; 
          border-color: $yellow;
+      }
+      .light &{
+         color: #4f4f4f;
+         border-color: #333;
       }
       @include mob {
          margin: 23px auto;

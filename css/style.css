@@ -70,10 +70,10 @@ header .menu {
   list-style: none;
 }
 @media screen and (min-width: 1920px) {
-  header .menu a {
+  .darck header .menu a {
     opacity: 0.5;
   }
-  header .menu a:hover {
+  .darck header .menu a:hover {
     opacity: 1;
   }
 }
@@ -96,19 +96,24 @@ header .menu {
   #header_block_r {
     position: fixed;
     left: calc(100% + 36px);
-    transition: 2s;
+    transition: left 2s;
     box-shadow: -36px 0px 17px 5px rgba(14, 15, 15, 0.72);
+    background: #1e1d1c;
     width: 100%;
     height: 100%;
     padding: 50px 70px;
     top: 0;
     z-index: 99999;
   }
-  .darck #header_block_r {
-    background: #1e1d1c;
+  #header_block_r, #header_block_r a {
+    color: #FCFFD4;
   }
   #header_block_r.open {
     left: 0;
+  }
+  #header_block_r .logo span {
+    background: #FCFFD4;
+    color: #494411;
   }
   #header_block_r li {
     margin-bottom: 30px;
@@ -154,6 +159,9 @@ header .menu {
 .menu a {
   transition: 0.5s;
   font-size: 14px;
+}
+.light .menu a:hover {
+  color: #BEA000;
 }
 
 #open_menu,
@@ -438,6 +446,17 @@ body {
 .darck .logo span {
   background: #FCFFD4;
   color: #494411;
+}
+
+.light {
+  background: linear-gradient(226deg, #F9F8F4 16.25%, #E8E6E2 102.54%);
+}
+.light, .light a {
+  color: #423805;
+}
+.light .logo span {
+  background: #423805;
+  color: #F4F3EE;
 }
 
 main > div,

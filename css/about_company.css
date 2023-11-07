@@ -426,6 +426,9 @@
   color: #fff;
   border-color: rgba(255, 255, 255, 0.4);
 }
+.light #block_form, .light #post_form {
+  color: #423805;
+}
 @media screen and (min-width: 1920px) {
   #block_form, #post_form {
     padding: 68px 31px;
@@ -462,6 +465,10 @@
   color: #fff;
   border-color: #fff;
 }
+.light #block_form [type=text], .light #post_form [type=text] {
+  color: #333;
+  border-color: #333;
+}
 #block_form [type=text]::-moz-placeholder, #post_form [type=text]::-moz-placeholder {
   opacity: 0.5;
   font-size: 14px;
@@ -476,6 +483,12 @@
 .darck #block_form [type=text]::placeholder, .darck #post_form [type=text]::placeholder {
   color: #E0E0E0;
 }
+.light #block_form [type=text]::-moz-placeholder, .light #post_form [type=text]::-moz-placeholder {
+  color: #4f4f4f;
+}
+.light #block_form [type=text]::placeholder, .light #post_form [type=text]::placeholder {
+  color: #4f4f4f;
+}
 #block_form [type=submit], #post_form [type=submit] {
   padding-bottom: 4px;
   margin: 38px auto 17px;
@@ -487,6 +500,10 @@
 .darck #block_form [type=submit], .darck #post_form [type=submit] {
   color: #FCFFD4;
   border-color: #FCFFD4;
+}
+.light #block_form [type=submit], .light #post_form [type=submit] {
+  color: #4f4f4f;
+  border-color: #333;
 }
 @media screen and (max-width: 767px) {
   #block_form [type=submit], #post_form [type=submit] {

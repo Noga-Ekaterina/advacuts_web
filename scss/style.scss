@@ -46,6 +46,18 @@
       background: $yellow;
       color: #494411;
    }
+   
+}
+.light{
+   background: linear-gradient(226deg, #F9F8F4 16.25%, #E8E6E2 102.54%);
+   &, a{
+      color: $yellow-darck;
+   }
+
+   .logo span {
+      background: $yellow-darck;
+      color: #F4F3EE;
+   }
 }
 
 main>div,
