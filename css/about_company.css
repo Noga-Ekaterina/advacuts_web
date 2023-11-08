@@ -533,4 +533,75 @@
 #post_form p {
   font-size: 20px;
   opacity: 1;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1919px) {
+  header .flexSB {
+    min-width: 808px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  header .block_text {
+    width: 538px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1919px) {
+  header .block_text {
+    width: 427px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  header .block_text h1 {
+    font-size: 60px;
+  }
+}
+@media screen and (max-width: 767px) {
+  header .block_text h1 {
+    font-size: 41px;
+  }
+}
+header .block_text .line {
+  width: 183px;
+  height: 1px;
+  opacity: 0.4;
+  background: #000;
+  margin: 18px 0 26px;
+}
+@media screen and (min-width: 1920px) {
+  header .block_text .line {
+    margin: 75px 0 40px;
+  }
+}
+header .block_text .line + p::first-letter {
+  font-size: 50px;
+  line-height: 50%;
+}
+@media screen and (max-width: 767px) {
+  header .block_text .line + p::first-letter {
+    font-size: 41px;
+  }
+}
+header .block_text p {
+  color: #000;
+  margin-top: 18px;
+}
+@media screen and (min-width: 1920px) {
+  header .block_text p {
+    margin-top: 30px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  header .img_and_t {
+    margin-top: -28px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1919px) {
+  header .img_and_t {
+    width: 382px;
+  }
+}
+@media screen and (max-width: 1919px) {
+  header .img_and_t img {
+    width: 100%;
+  }
 }/*# sourceMappingURL=about_company.css.map */

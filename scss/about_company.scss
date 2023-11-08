@@ -3,3 +3,65 @@
 @import "_style_coments.scss";
 @import "_style_services.scss";
 @import "_syle_form.scss";
+
+header{
+   .flexSB{
+      @include t {
+         min-width: 808px;
+      }
+   }
+   .block_text{
+      @include xl {
+         width: 538px;
+      }
+      @include t {
+         width: 427px;
+      }
+      h1{
+         @include xl {
+            font-size: 60px;
+         }
+         @include mob {
+            font-size: 41px;
+         }
+      }
+      .line{
+         width: 183px;
+         height: 1px;
+         opacity: 0.4;
+         background: #000;
+         margin: 18px 0 26px;
+         @include xl {
+            margin: 75px 0 40px;
+         }
+
+         +p::first-letter{
+            font-size: 50px;
+            line-height: 50%;
+            @include mob {
+               font-size: 41px;
+            }
+         }
+      }
+      p{
+         color: #000;
+         margin-top: 18px;
+         @include xl {
+            margin-top: 30px;
+         }
+      }
+   }
+   .img_and_t{
+      @include xl {
+         margin-top: -28px;
+      }
+      @include t {
+         width: 382px;
+      }
+      @include mob-and-t {
+         img{
+            width: 100%;
+         }
+      }
+   }
+}
