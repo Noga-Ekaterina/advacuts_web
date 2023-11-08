@@ -51,12 +51,18 @@
       margin-bottom: 25px;
       padding: 24px 8px;
    }
-
+   img {
+      float: left;
+   }
+   &_num{
+      font-size: 20px;
+   }
    >p {
       max-width: 310px;
       font-size: 15px;
       color: #fff;
       opacity: 0.5;
+      clear: both;
    }
 
    &:hover {

@@ -48,11 +48,15 @@
     padding: 24px 8px;
   }
 }
+.service img {
+  float: left;
+}
 .service > p {
   max-width: 310px;
   font-size: 15px;
   color: #fff;
   opacity: 0.5;
+  clear: both;
 }
 .service:hover::before {
   bottom: 0;
