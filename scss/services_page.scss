@@ -32,12 +32,11 @@ main> div{
       @include small-text(4);
       padding-right: 45px;
    }
-   .service_num{
+   &_num{
       width: calc(100% - 54px);
-      font-size: 20px;
       color: rgba(252, 255, 212, 0.2);
    }
-   .service_h{
+   &_h{
       color: #F2F2F2;
       margin: 13px 0 19px;
       padding-right: 8px;

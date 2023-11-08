@@ -51,6 +51,9 @@
 .service img {
   float: left;
 }
+.service_num {
+  font-size: 20px;
+}
 .service > p {
   max-width: 310px;
   font-size: 15px;
@@ -165,12 +168,11 @@ main > div {
   -webkit-box-orient: vertical;
   padding-right: 45px;
 }
-.service .service_num {
+.service_num {
   width: calc(100% - 54px);
-  font-size: 20px;
   color: rgba(252, 255, 212, 0.2);
 }
-.service .service_h {
+.service_h {
   color: #F2F2F2;
   margin: 13px 0 19px;
   padding-right: 8px;

@@ -352,6 +352,9 @@
 .service img {
   float: left;
 }
+.service_num {
+  font-size: 20px;
+}
 .service > p {
   max-width: 310px;
   font-size: 15px;
