@@ -349,11 +349,18 @@
     padding: 24px 8px;
   }
 }
+.service img {
+  float: left;
+}
+.service_num {
+  font-size: 20px;
+}
 .service > p {
   max-width: 310px;
   font-size: 15px;
   color: #fff;
   opacity: 0.5;
+  clear: both;
 }
 .service:hover::before {
   bottom: 0;
@@ -604,4 +611,39 @@ header .block_text p {
   header .img_and_t img {
     width: 100%;
   }
+}
+
+#block1 {
+  background: linear-gradient(226deg, #0B0B0B 16.25%, #393319 102.54%);
+}
+
+@media screen and (min-width: 1920px) {
+  .service {
+    width: calc((100% - 60px) / 3);
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1919px) {
+  .service {
+    width: calc((100% - 20px) / 2);
+  }
+}
+.service_num {
+  width: 100%;
+  width: calc(100% - 64px);
+  margin-bottom: 14px;
+  opacity: 0.5;
+  color: rgba(252, 255, 212, 0.5);
+}
+.service .service_h {
+  margin-bottom: 10px;
+}
+.service .service_h p {
+  font-size: 20px;
+  margin-left: 36px;
+}
+.service::before {
+  width: 100%;
+  height: 100%;
+  border-radius: initial;
+  transition: opacity 1s;
 }/*# sourceMappingURL=about_company.css.map */
