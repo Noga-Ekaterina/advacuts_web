@@ -126,3 +126,13 @@
    }
    
 }
+@mixin service6-width{
+   @include xl {
+      width: calc((100% - 60px) / 3);
+   }
+
+   @include t {
+      width: calc((100% - 20px) / 2);
+
+   }
+}

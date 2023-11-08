@@ -161,14 +161,7 @@ header {
    background-repeat: no-repeat;
    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.20);
 
-   @include xl {
-      width: calc((100% - 60px) / 3);
-   }
-
-   @include t {
-      width: calc((100% - 20px) / 2);
-
-   }
+   @include service6-width;
    @include mob-and-t {
       background-position: calc(100% + 8px) calc(100% + 8px);
    }
