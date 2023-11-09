@@ -70,8 +70,10 @@
   border-radius: inherit;
 }
 
-#service_descr {
-  align-items: flex-end;
+@media screen and (min-width: 768px) {
+  #service_descr {
+    align-items: flex-end;
+  }
 }
 #service_descr > img {
   height: 454px;

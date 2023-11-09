@@ -78,8 +78,9 @@
    }
 }
 #service_descr {
-   align-items: flex-end;
-
+   @include t-u {
+      align-items: flex-end;
+   }
    >img {
       height: 454px;
       @include mob {
