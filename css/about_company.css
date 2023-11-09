@@ -662,4 +662,35 @@ header .block_text p {
   height: 100%;
   border-radius: initial;
   transition: opacity 1s;
+}
+
+#achievements {
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+@media screen and (min-width: 1920px) {
+  #achievements {
+    margin-top: 32px;
+  }
+}
+
+.achievement {
+  margin-top: 30px;
+  text-align: center;
+}
+@media screen and (min-width: 1920px) {
+  .achievement {
+    width: 20%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1919px) {
+  .achievement {
+    width: 50%;
+  }
+}
+.achievement .num {
+  font-size: 73px;
+}
+.achievement p {
+  font-size: 23px;
 }/*# sourceMappingURL=about_company.css.map */
