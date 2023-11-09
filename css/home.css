@@ -253,7 +253,7 @@
   max-width: 480px;
   width: 100%;
 }
-@media screen and (min-width: 768px) and (max-width: 1919px) {
+@media screen and (min-width: 768px) {
   #coment_modal h2, #coment_modal p {
     margin: 15px auto;
     text-align: center;

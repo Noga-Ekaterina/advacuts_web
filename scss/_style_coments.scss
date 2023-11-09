@@ -239,7 +239,7 @@
       width: 100%;
    }
    h2, p{
-      @include t {
+      @include t-u {
          margin: 15px auto;
          text-align: center;
       }
