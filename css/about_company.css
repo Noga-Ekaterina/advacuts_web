@@ -619,6 +619,15 @@ header .block_text p {
   background: linear-gradient(226deg, #0B0B0B 16.25%, #393319 102.54%);
 }
 
+#services {
+  margin-bottom: 55px;
+}
+@media screen and (min-width: 1920px) {
+  #services {
+    margin-bottom: 140px;
+  }
+}
+
 @media screen and (min-width: 1920px) {
   .service {
     width: calc((100% - 60px) / 3);
