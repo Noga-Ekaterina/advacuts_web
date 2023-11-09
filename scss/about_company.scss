@@ -70,6 +70,10 @@ header{
 }
 .service{
    @include service6-width;
+   
+   @include t {
+      padding: 30px 65px;
+   }
 
    &_num{
       width: 100%;
