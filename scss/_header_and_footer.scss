@@ -33,7 +33,10 @@ header {
 
 
    }
-
+   button{
+      border: 0;
+      background: none;
+   }
    @include t {
       padding: 40px $pading-t 0;
 
