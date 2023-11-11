@@ -1,5 +1,5 @@
 const btnRequestCall = document.querySelectorAll('.request_call');
-const blockRequestCall = document.querySelectorAll('#block_request_call');
+const blockRequestCall = document.querySelector('#block_request_call');
 
 btnRequestCall.forEach((btn)=>{
    btn.onclick=()=>{
@@ -8,3 +8,9 @@ btnRequestCall.forEach((btn)=>{
       blockRequestCall.style.display = "block";
    }
 })
+
+document.querySelector('#close_request_call').onclick = function() {
+   body.style.overflow = ""
+   shadowBlock.style.display = "";
+   blockRequestCall.style.display = "";
+};
