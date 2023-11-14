@@ -11,4 +11,6 @@ btnRequestCall.forEach((btn)=>{
 
 new CheckForm("block_request_call", "post_form_modal").start()
 
+new CloseModal("close_request_call", "block_request_call").click()
+
 new CloseModal("close_post_form_modal", "post_form_modal").click()
