@@ -19,10 +19,15 @@
       </div>
    </div>
    <div id="shadow_block">
-      <div id="block_request_call">
+      <div id="block_request_call" class="modal_form darck">
          <div id="close_request_call" class="close"><img src="img/close.png" alt=""></div>
-         <p>Беслпатная консультация</p>
-         <form action=""><input type="text"><input type="text"><input type="submit" value=""></form>
+         <p class="h_form">Беслпатная консультация</p>
+         <form action="" method="post"><input type="text" placeholder="Имя" name="userName"><input type="text" placeholder="Телефон" name="number"><input type="submit" value="отправить" disabled></form>
+         <p>нажимая на кнопку отправить я соглашаюсь на обработку своих персональных данных в соответсвии с ФЗ №152</p>
+      </div>
+      <div id="post_form_modal" class="modal_form darck">
+         <div id="close_post_form_modal" class="close"><img src="img/close.png" alt=""></div>
+         Заявка отправлена, с Вами скоро свяжутся.
       </div>
       <div id="service_descr">
          <div id="close_descr" class="close"><img src="img/close.png" alt=""></div>
@@ -503,7 +508,6 @@
    <script src="scripts/lets.js"></script>
    <script src="scripts/preloader.js"></script>
    <script src="scripts/menu.js"></script>
-   <script src="scripts/request_call.js"></script>
    <script src="scripts/slider(2 slides).js"></script>
    <script src="scripts/services.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
@@ -514,6 +518,7 @@
    <script src="scripts/our_affair.js"></script>
    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Afb1b94bc4953e56da06850c73e00b4b811de26858a5f15467c6233c70c675f27&amp;id=map&amp;lang=ru_RU&amp;scroll=true"></script>
    <script src="scripts/form.js"></script>
+   <script src="scripts/request_call.js"></script>
 </body>
 
 </html>

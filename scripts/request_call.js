@@ -9,8 +9,6 @@ btnRequestCall.forEach((btn)=>{
    }
 })
 
-document.querySelector('#close_request_call').onclick = function() {
-   body.style.overflow = ""
-   shadowBlock.style.display = "";
-   blockRequestCall.style.display = "";
-};
+new CheckForm("block_request_call", "post_form_modal").start()
+
+new CloseModal("close_post_form_modal", "post_form_modal").click()
