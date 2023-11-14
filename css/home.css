@@ -534,6 +534,109 @@
   aspect-ratio: 335/144;
 }
 
+input {
+  border: 0;
+  border-bottom: 1.5px solid;
+  background: none;
+}
+
+[type=text] {
+  display: block;
+  box-sizing: border-box;
+  padding: 6px 12px;
+  margin-top: 22px;
+}
+.darck [type=text] {
+  color: #fff;
+  border-color: #fff;
+}
+.light [type=text] {
+  color: #333;
+  border-color: #333;
+}
+[type=text]::-moz-placeholder {
+  opacity: 0.5;
+  font-size: 14px;
+}
+[type=text]::placeholder {
+  opacity: 0.5;
+  font-size: 14px;
+}
+.darck [type=text]::-moz-placeholder {
+  color: #E0E0E0;
+}
+.darck [type=text]::placeholder {
+  color: #E0E0E0;
+}
+.light [type=text]::-moz-placeholder {
+  color: #4f4f4f;
+}
+.light [type=text]::placeholder {
+  color: #4f4f4f;
+}
+
+[type=submit] {
+  padding-bottom: 4px;
+  margin: 38px auto 17px;
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+}
+.darck [type=submit] {
+  color: #FCFFD4;
+  border-color: #FCFFD4;
+}
+.light [type=submit] {
+  color: #4f4f4f;
+  border-color: #333;
+}
+@media screen and (max-width: 767px) {
+  [type=submit] {
+    margin: 23px auto;
+  }
+}
+[type=submit][disabled] {
+  cursor: default;
+  opacity: 0.4;
+}
+
+form + p {
+  font-size: 9px;
+  opacity: 0.6;
+  max-width: 254px;
+  margin: 0 auto;
+}
+.darck form + p {
+  color: #fff;
+}
+
+#shadow_block .modal_form {
+  border-radius: 50px 0px;
+  background: rgba(37, 37, 37, 0.98);
+  box-shadow: 11px 11px 34px 0px rgba(0, 0, 0, 0.75);
+  padding: 78px 70px;
+}
+#shadow_block .modal_form p {
+  text-align: center;
+}
+#shadow_block .modal_form form {
+  padding: 0 10px;
+}
+#shadow_block .modal_form form input {
+  margin-inline: auto;
+}
+#shadow_block .modal_form .h_form {
+  font-size: 23px;
+}
+#shadow_block .modal_form.darck .h_form {
+  color: #F2F2F2;
+}
+
+.darck #post_form_modal {
+  color: #F2F2F2;
+}
+
 #block_form, #post_form {
   max-width: 328px;
   box-sizing: border-box;
@@ -567,80 +670,14 @@
     margin: 35px auto 0;
   }
 }
-#block_form input, #post_form input {
-  border: 0;
-  border-bottom: 1.5px solid;
-  background: none;
-}
 #block_form [type=text], #post_form [type=text] {
-  display: block;
   width: 100%;
-  box-sizing: border-box;
-  padding: 6px 12px;
-  margin-top: 22px;
-}
-.darck #block_form [type=text], .darck #post_form [type=text] {
-  color: #fff;
-  border-color: #fff;
-}
-.light #block_form [type=text], .light #post_form [type=text] {
-  color: #333;
-  border-color: #333;
-}
-#block_form [type=text]::-moz-placeholder, #post_form [type=text]::-moz-placeholder {
-  opacity: 0.5;
-  font-size: 14px;
-}
-#block_form [type=text]::placeholder, #post_form [type=text]::placeholder {
-  opacity: 0.5;
-  font-size: 14px;
-}
-.darck #block_form [type=text]::-moz-placeholder, .darck #post_form [type=text]::-moz-placeholder {
-  color: #E0E0E0;
-}
-.darck #block_form [type=text]::placeholder, .darck #post_form [type=text]::placeholder {
-  color: #E0E0E0;
-}
-.light #block_form [type=text]::-moz-placeholder, .light #post_form [type=text]::-moz-placeholder {
-  color: #4f4f4f;
-}
-.light #block_form [type=text]::placeholder, .light #post_form [type=text]::placeholder {
-  color: #4f4f4f;
-}
-#block_form [type=submit], #post_form [type=submit] {
-  padding-bottom: 4px;
-  margin: 38px auto 17px;
-  display: block;
-  width: -moz-fit-content;
-  width: fit-content;
-  cursor: pointer;
-}
-.darck #block_form [type=submit], .darck #post_form [type=submit] {
-  color: #FCFFD4;
-  border-color: #FCFFD4;
-}
-.light #block_form [type=submit], .light #post_form [type=submit] {
-  color: #4f4f4f;
-  border-color: #333;
-}
-@media screen and (max-width: 767px) {
-  #block_form [type=submit], #post_form [type=submit] {
-    margin: 23px auto;
-  }
-}
-#block_form [type=submit][disabled], #post_form [type=submit][disabled] {
-  cursor: default;
-  opacity: 0.4;
 }
 #block_form p, #post_form p, #block_form h3, #post_form h3 {
   text-align: center;
 }
 #block_form h3, #post_form h3 {
   font-weight: 400;
-}
-#block_form p, #post_form p {
-  font-size: 9px;
-  opacity: 0.6;
 }
 
 #post_form {
