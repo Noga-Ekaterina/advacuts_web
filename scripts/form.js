@@ -1,19 +1,28 @@
-const blockForm = document.querySelector('#block_form');
-const formContact = document.forms.formContact;
-const inputName = formContact.userName;
-const inputNumber = formContact.number;
-const btnSubmit = document.querySelector('[type="submit"]');
+class CheckForm{
+   constructor(blockForm, postForm){
+      this.blockForm= blockForm;
+      this.postForm= postForm
+   }
 
-formContact.oninput=()=>{
-   
-   if (inputName.value.length!=0 && inputNumber.value.length!=0) {
-      btnSubmit.removeAttribute("disabled")
-   } else {
-      btnSubmit.setAttribute("disabled", "true")
+   start(){
+      var Th= this;
+      let thisBlockForm= document.getElementById(Th.blockForm);
+      let thisPostForm= document.getElementById(Th.postForm)
+      let form= thisBlockForm.querySelector("form");
+      let btnSubmit= form.querySelector('[type="submit"]');
+      form.oninput=()=>{
+         if (form.userName.value.length!=0 && form.number.value.length!=0) {
+            btnSubmit.removeAttribute("disabled")
+         } else {
+            btnSubmit.setAttribute("disabled", "true")
+         }
+      }
+      form.onsubmit= ()=>{
+         thisBlockForm.style.display="none";
+         thisPostForm.style.display="flex";
+         return false
+      }
    }
 }
-formContact.onsubmit= ()=>{
-   blockForm.remove();
-   document.querySelector('#post_form').style.display="flex";
-   return false
-}
+
+new CheckForm("block_form", "post_form").start()
