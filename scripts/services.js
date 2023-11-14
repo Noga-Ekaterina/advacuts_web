@@ -144,8 +144,4 @@ function checkText(modalService) {
    document.querySelector('#p3').innerHTML = modalService[3];
 }
 
-document.querySelector('#close_descr').onclick = function () {
-   body.style.overflow=""
-   shadowBlock.style.display = "";
-   serviceDescr.style.display = "";
-};
+new CloseModal("close_descr", "service_descr").click()

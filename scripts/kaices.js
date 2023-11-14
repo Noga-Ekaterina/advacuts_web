@@ -127,8 +127,4 @@ kaice. forEach((el, index)=>{
    }
 })
 
-document.querySelector('#close_kaice_descr').onclick = function () {
-   body.style.overflow=""
-   shadowBlock.style.display = "";
-   kaiceDescr.style.display = "";
-};
+new CloseModal("close_kaice_descr", "kaice_descr").click()

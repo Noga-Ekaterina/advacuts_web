@@ -96,8 +96,4 @@ const comentImgPrev =()=> newComentImgActive(-1);
 btnPrevComentModal.onclick= comentImgPrev;
 btnNextComentModal.onclick= comentImgNext;
 
-document.querySelector('#close_coment_modal').onclick = function () {
-   body.style.overflow=""
-   shadowBlock.style.display = "";
-   comentModal.style.display = "";
-};
+new CloseModal("close_coment_modal", "coment_modal").click()
