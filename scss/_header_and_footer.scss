@@ -74,9 +74,12 @@ header {
 
             opacity: 0.5;
    
-            &:hover {
-               opacity: 1;
-            }
+         }
+         @include t {
+            opacity: 0.8;
+         }
+         &:hover {
+            opacity: 1;
          }
       }
       
@@ -93,7 +96,8 @@ header {
    @include t {
       display: flex;
       align-items: center;
-      column-gap: 35px;
+      column-gap: 30px;
+      margin-top: -15px;
    }
    @include mob {
       position: fixed;
@@ -143,6 +147,16 @@ header {
 
       @include t-u {
          display: none;
+      }
+   }
+   .tel{
+      @include t-u {
+         font-size: 14px;
+      }
+   }
+   .mail{
+      @include t-u {
+         font-size: 13px;
       }
    }
 }

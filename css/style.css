@@ -77,9 +77,14 @@ header .menu {
   .darck header .menu a {
     opacity: 0.5;
   }
-  .darck header .menu a:hover {
-    opacity: 1;
+}
+@media screen and (min-width: 768px) and (max-width: 1919px) {
+  .darck header .menu a {
+    opacity: 0.8;
   }
+}
+.darck header .menu a:hover {
+  opacity: 1;
 }
 
 .logo span {
@@ -92,8 +97,9 @@ header .menu {
   #header_block_r {
     display: flex;
     align-items: center;
-    -moz-column-gap: 35px;
-         column-gap: 35px;
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+    margin-top: -15px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -143,6 +149,16 @@ header .menu {
 @media screen and (min-width: 768px) {
   #header_block_r .logo {
     display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  #header_block_r .tel {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 768px) {
+  #header_block_r .mail {
+    font-size: 13px;
   }
 }
 
@@ -503,14 +519,13 @@ a {
 }
 
 .tel {
-  font-size: 18px;
   font-weight: 700;
 }
 
 .mail {
-  font-style: 14px;
+  font-size: 14px;
   opacity: 0.3;
-  margin-top: 4px;
+  margin-top: 10px;
   transition: 0.5s;
 }
 .mail:hover {
