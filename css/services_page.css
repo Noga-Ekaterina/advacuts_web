@@ -156,7 +156,7 @@ main > div {
 }
 @media screen and (min-width: 768px) and (max-width: 1919px) {
   .service {
-    width: calc((100% - 70px) / 3);
+    width: calc((100% - 50px) / 3);
   }
 }
 .service p {
