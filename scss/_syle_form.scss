@@ -1,53 +1,54 @@
-   input{
-      border: 0;
-      border-bottom: 1.5px solid;
-      background: none;
+input{
+   border: 0;
+   border-bottom: 1.5px solid;
+   background: none;
+}
+[type="text"], 
+[type="email"]{
+   display: block;
+   box-sizing: border-box;
+   padding: 6px 12px;
+   margin-top: 22px;
+   .darck &{
+      color: #fff;
+      border-color: #fff;
    }
-   [type="text"]{
-      display: block;
-      box-sizing: border-box;
-      padding: 6px 12px;
-      margin-top: 22px;
-      .darck &{
-         color: #fff;
-         border-color: #fff;
-      }
-      .light &{
-         color: #333;
-         border-color: #333;
-      }
-      &::placeholder{
-         opacity: 0.5;
-         font-size: 14px;
-         .darck &{
-            color: #E0E0E0;
-         }
-         .light &{
-            color: #4f4f4f;
-         }
-      }
+   .light &{
+      color: #333;
+      border-color: #333;
    }
-   [type="submit"]{
-      padding-bottom: 4px;
-      margin: 38px auto 17px;
-      display: block;
-      width: fit-content;
-      cursor: pointer;
+   &::placeholder{
+      opacity: 0.5;
+      font-size: 14px;
       .darck &{
-         color: $yellow; 
-         border-color: $yellow;
+         color: #E0E0E0;
       }
       .light &{
          color: #4f4f4f;
-         border-color: #333;
       }
-      @include mob {
-         margin: 23px auto;
-      }
-      &[disabled]{
-         cursor: default;
-         opacity: 0.4;
-      }
+   }
+}
+[type="submit"]{
+   padding-bottom: 4px;
+   margin: 38px auto 17px;
+   display: block;
+   width: fit-content;
+   cursor: pointer;
+   .darck &{
+      color: $yellow; 
+      border-color: $yellow;
+   }
+   .light &{
+      color: #4f4f4f;
+      border-color: #333;
+   }
+   @include mob {
+      margin: 23px auto;
+   }
+   &[disabled]{
+      cursor: default;
+      opacity: 0.4;
+   }
 }
 form+ p{
    font-size: 9px;
@@ -64,15 +65,7 @@ form+ p{
    background: rgba(37, 37, 37, 0.98);
    box-shadow: 11px 11px 34px 0px rgba(0, 0, 0, 0.75);
    padding: 78px 70px;
-   p{
-      text-align: center;
-   }
-   form{
-      padding: 0 10px;
-      input{
-         margin-inline: auto;
-      }
-   }
+   
    .h_form{
       font-size: 23px;
    }
@@ -80,7 +73,19 @@ form+ p{
       color: #F2F2F2;
    }
 }
+#block_request_call {
+   p{
+      text-align: center;
+   }
+   form{
+      padding: 0 10px;
+   }
+   input{
+      margin-inline: auto;
+   }
+}
 #post_form_modal{
+   text-align: center;
    .darck &{
       color: #F2F2F2;
    }
