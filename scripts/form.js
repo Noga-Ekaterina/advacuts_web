@@ -1,7 +1,8 @@
 class CheckForm{
-   constructor(blockForm, postForm){
+   constructor(blockForm, postForm, typeForm){
       this.blockForm= blockForm;
-      this.postForm= postForm
+      this.postForm= postForm;
+      this.typeForm= typeForm
    }
 
    start(){
@@ -12,7 +13,15 @@ class CheckForm{
       let btnSubmit= form.querySelector('[type="submit"]');
       form.oninput=()=>{
          if (form.userName.value.length!=0 && form.number.value.length!=0) {
-            btnSubmit.removeAttribute("disabled")
+            if (Th.typeForm== "pushDoc"){
+               if (form.iFiles.files.length!=0){
+                  btnSubmit.removeAttribute("disabled")
+               } else {
+                  btnSubmit.setAttribute("disabled", "true")
+               }
+            }
+            else
+               btnSubmit.removeAttribute("disabled")
          } else {
             btnSubmit.setAttribute("disabled", "true")
          }

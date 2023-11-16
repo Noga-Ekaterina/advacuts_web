@@ -135,6 +135,55 @@ header {
    }
 }
 
+#block_push_doc{
+   box-sizing: border-box;
+   @include xl {
+      width: 940px;
+   }
+   @include t {
+      width: 725px;
+   }
+
+   [type="submit"]{
+      @include t-u {
+         margin-left: 0;
+         margin-top: -20px;
+      }
+   }
+   #input_file{
+      position: absolute;
+      opacity: 0;
+      z-index: -1;
+   }
+   .flex{
+      column-gap: 25px;
+      margin-top: 22px;
+   }
+   label{
+      color: #fff;
+      cursor: pointer;
+   }
+   textarea{
+      @extend [type="text"];
+      display: block;
+      background: none;
+      border: 1px solid;
+      height: 153px;
+      margin-top: 14px;
+      padding: 12px 22px;
+      @include xl {
+         width: 462px;
+      }
+      @include t {
+         width: 310px;
+      }
+   }
+   form +p{
+      text-align: left;
+      margin-left: 0;
+   }
+}
+
 #block1 {
    background: linear-gradient(117deg, #26241E 35.16%, #15130D 71.84%), #1F1E1B;
 

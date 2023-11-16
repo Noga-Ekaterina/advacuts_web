@@ -36,6 +36,7 @@ header {
    button{
       border: 0;
       background: none;
+      cursor: pointer;
    }
    @include t {
       padding: 40px $pading-t 0;
@@ -55,7 +56,6 @@ header {
       }
       .yes_small {
          display: block;
-         max-width: 292px;
          margin-top: 66px;
          padding: 19px 17px;
          color: #fff;

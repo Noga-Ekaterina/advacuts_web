@@ -40,6 +40,7 @@ header #flex_header {
 header button {
   border: 0;
   background: none;
+  cursor: pointer;
 }
 @media screen and (min-width: 768px) and (max-width: 1919px) {
   header {
@@ -59,7 +60,6 @@ header button {
   }
   header .yes_small {
     display: block;
-    max-width: 292px;
     margin-top: 66px;
     padding: 19px 17px;
     color: #fff;

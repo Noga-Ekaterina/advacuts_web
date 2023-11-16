@@ -540,38 +540,44 @@ input {
   background: none;
 }
 
-[type=text] {
+[type=text], #block_push_doc textarea,
+[type=email] {
   display: block;
   box-sizing: border-box;
   padding: 6px 12px;
   margin-top: 22px;
 }
-.darck [type=text] {
+.darck [type=text], .darck #block_push_doc textarea, #block_push_doc .darck textarea,
+.darck [type=email] {
   color: #fff;
   border-color: #fff;
 }
-.light [type=text] {
+.light [type=text], .light #block_push_doc textarea, #block_push_doc .light textarea,
+.light [type=email] {
   color: #333;
   border-color: #333;
 }
-[type=text]::-moz-placeholder {
+[type=text]::-moz-placeholder, #block_push_doc textarea::-moz-placeholder, [type=email]::-moz-placeholder {
   opacity: 0.5;
   font-size: 14px;
 }
-[type=text]::placeholder {
+[type=text]::placeholder, #block_push_doc textarea::placeholder,
+[type=email]::placeholder {
   opacity: 0.5;
   font-size: 14px;
 }
-.darck [type=text]::-moz-placeholder {
+.darck [type=text]::-moz-placeholder, .darck #block_push_doc textarea::-moz-placeholder, #block_push_doc .darck textarea::-moz-placeholder, .darck [type=email]::-moz-placeholder {
   color: #E0E0E0;
 }
-.darck [type=text]::placeholder {
+.darck [type=text]::placeholder, .darck #block_push_doc textarea::placeholder, #block_push_doc .darck textarea::placeholder,
+.darck [type=email]::placeholder {
   color: #E0E0E0;
 }
-.light [type=text]::-moz-placeholder {
+.light [type=text]::-moz-placeholder, .light #block_push_doc textarea::-moz-placeholder, #block_push_doc .light textarea::-moz-placeholder, .light [type=email]::-moz-placeholder {
   color: #4f4f4f;
 }
-.light [type=text]::placeholder {
+.light [type=text]::placeholder, .light #block_push_doc textarea::placeholder, #block_push_doc .light textarea::placeholder,
+.light [type=email]::placeholder {
   color: #4f4f4f;
 }
 
@@ -617,15 +623,6 @@ form + p {
   box-shadow: 11px 11px 34px 0px rgba(0, 0, 0, 0.75);
   padding: 78px 70px;
 }
-#shadow_block .modal_form p {
-  text-align: center;
-}
-#shadow_block .modal_form form {
-  padding: 0 10px;
-}
-#shadow_block .modal_form form input {
-  margin-inline: auto;
-}
 #shadow_block .modal_form .h_form {
   font-size: 23px;
 }
@@ -633,6 +630,19 @@ form + p {
   color: #F2F2F2;
 }
 
+#block_request_call p {
+  text-align: center;
+}
+#block_request_call form {
+  padding: 0 10px;
+}
+#block_request_call input {
+  margin-inline: auto;
+}
+
+#post_form_modal {
+  text-align: center;
+}
 .darck #post_form_modal {
   color: #F2F2F2;
 }
@@ -670,7 +680,7 @@ form + p {
     margin: 35px auto 0;
   }
 }
-#block_form [type=text], #post_form [type=text] {
+#block_form [type=text], #block_form #block_push_doc textarea, #block_push_doc #block_form textarea, #post_form [type=text], #post_form #block_push_doc textarea, #block_push_doc #post_form textarea {
   width: 100%;
 }
 #block_form p, #post_form p, #block_form h3, #post_form h3 {
@@ -811,6 +821,62 @@ header .img_and_t .text {
 .img_and_t .text span {
   font-size: 14px;
   opacity: 0.5;
+}
+
+#block_push_doc {
+  box-sizing: border-box;
+}
+@media screen and (min-width: 1920px) {
+  #block_push_doc {
+    width: 940px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1919px) {
+  #block_push_doc {
+    width: 725px;
+  }
+}
+@media screen and (min-width: 768px) {
+  #block_push_doc [type=submit] {
+    margin-left: 0;
+    margin-top: -20px;
+  }
+}
+#block_push_doc #input_file {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+#block_push_doc .flex {
+  -moz-column-gap: 25px;
+       column-gap: 25px;
+  margin-top: 22px;
+}
+#block_push_doc label {
+  color: #fff;
+  cursor: pointer;
+}
+#block_push_doc textarea {
+  display: block;
+  background: none;
+  border: 1px solid;
+  height: 153px;
+  margin-top: 14px;
+  padding: 12px 22px;
+}
+@media screen and (min-width: 1920px) {
+  #block_push_doc textarea {
+    width: 462px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1919px) {
+  #block_push_doc textarea {
+    width: 310px;
+  }
+}
+#block_push_doc form + p {
+  text-align: left;
+  margin-left: 0;
 }
 
 #block1 {
